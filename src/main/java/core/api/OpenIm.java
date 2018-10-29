@@ -23,6 +23,9 @@ public class OpenIm {
         return (ImportMsg) Academy.requestEnhance(new ImportMsg(serviceName));
     }
 
+    public ImPush imPushPrepare(){
+        return (ImPush) Academy.requestEnhance(new ImPush(serviceName));
+    }
     public ImGetPushReport imGetPushReportPrepare() {
         return (ImGetPushReport) Academy.requestEnhance(new ImGetPushReport(serviceName));
     }

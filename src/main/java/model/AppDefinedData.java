@@ -6,9 +6,7 @@ public class AppDefinedData {
     @JSONField(name = "Tag")
     private String tag;
     @JSONField(name = "value")
-    private String stringValue;
-    @JSONField(name = "value")
-    private byte[] byteValue;
+    private Object Value;
 
     public String getTag() {
         return tag;
@@ -18,19 +16,11 @@ public class AppDefinedData {
         this.tag = tag;return this;
     }
 
-    public String getStringValue() {
-        return stringValue;
+    public Object getValue() {
+        return Value;
     }
 
-    public AppDefinedData setStringValue(String stringValue) {
-        this.stringValue = stringValue;return this;
-    }
-
-    public byte[] getByteValue() {
-        return byteValue;
-    }
-
-    public AppDefinedData setByteValue(byte[] byteValue) {
-        this.byteValue = byteValue;return this;
+    public AppDefinedData setValue(Object value) {
+        Value = value;return this;
     }
 }

@@ -46,6 +46,7 @@ public class AsyncHttpClient implements HttpClient{
                 generalResponse.setActionStatus((String) json.remove("ActionStatus"));
                 generalResponse.setErrorCode((Integer) json.remove("ErrorCode"));
                 generalResponse.setErrorInfo((String) json.remove("ErrorInfo"));
+                generalResponse.setErrorDisplay((String) json.remove("ErrorDisplay"));
                 generalResponse.setResponseResult(json);
                 return generalResponse;
             }

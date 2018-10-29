@@ -1,12 +1,18 @@
 package model;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 import java.util.List;
 import java.util.Map;
 
 public class Condition {
+    @JSONField(name = "TagsAnd")
     private List<String> tagsAnd;
+    @JSONField(name = "TagsOr")
     private List<String> tagsOr;
+    @JSONField(name = "AttrsAnd")
     private Map<String,String> attrsAnd;
+    @JSONField(name = "AttrsOr")
     private Map<String,String> attrsOr;
 
     public List<String> getTagsAnd() {

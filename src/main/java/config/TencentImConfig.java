@@ -1,22 +1,47 @@
 package config;
 
 import com.alibaba.fastjson.util.TypeUtils;
+import org.apache.commons.configuration.Configuration;
+import org.apache.commons.configuration.ConfigurationException;
+import org.apache.commons.configuration.PropertiesConfiguration;
+import org.apache.commons.lang3.RandomUtils;
 
 public class TencentImConfig {
-    private static String sdkappid = "1400154520";
-    private static String identifier="storm";
-    private static String usersig="eJxlj9FOgzAUhu95CsKtRttCwZl4gcp0zKkIGN1N00FxXTcopeLU*O5OXGITz*33-ec-59OybdvJbtIj WhTNa62JfpfMsU9tBziHf1BKXhKqiavKf5BtJVeM0EozNUCIMUYAmA4vWa15xfdGpxu1MXBXCjJ0-OY9 ACD2djtMhb8McBblF5OoXzVjeNJO8nGSifVjvFw01Vvin6sRWCdTedddP7sHbFtEccijkCPcinB5tZjf ZsXDhy-CMJ6mfaCp6J7u57lIj2Fbri4pLM6MSs03bP*QB3yMglFg0J6pjjf1IKDdvRC54Gcc68v6BlnaXXk_";
-    private static String host="console.tim.qq.com";
-    private static String ver="v4";
+    private static String sdkappid ;
+    private static String identifier;
+    private static String usersig;
+    private static String host;
+    private static String ver;
     private static boolean async =true;
+    private static Configuration configs;
 
     public static String buildRequestUrl(String serviceName,String command){
         return "https://"+host+"/"+ver+"/"+serviceName+"/"+command
                 +"?sdkappid="+sdkappid+"&identifier="+identifier+"&usersig="+usersig
-                +"&random=99999999&contenttype=json";
+                +"&random="+RandomUtils.nextInt()+"&contenttype=json";
     }
-    public static void init(){
-        TypeUtils.compatibleWithJavaBean=true;
+
+    public synchronized static void init(String filePath){
+        if (configs != null) {
+            return;
+        }
+
+        try {
+            configs = new PropertiesConfiguration(filePath);
+        } catch (ConfigurationException e) {
+            e.printStackTrace();
+        }
+
+        if (configs == null) {
+            throw new IllegalStateException("can`t find file by path:" + filePath);
+        }
+        sdkappid=configs.getString("sdkappid");
+        identifier=configs.getString("identifier");
+        usersig=configs.getString("usersig");
+
+        host=configs.getString("host");
+        ver=configs.getString("ver");
+        async=configs.getBoolean("async");
     }
     public static String getSdkappid() {
         return sdkappid;
@@ -42,4 +67,27 @@ public class TencentImConfig {
         return async;
     }
 
+    public static void setSdkappid(String sdkappid) {
+        TencentImConfig.sdkappid = sdkappid;
+    }
+
+    public static void setIdentifier(String identifier) {
+        TencentImConfig.identifier = identifier;
+    }
+
+    public static void setUsersig(String usersig) {
+        TencentImConfig.usersig = usersig;
+    }
+
+    public static void setHost(String host) {
+        TencentImConfig.host = host;
+    }
+
+    public static void setVer(String ver) {
+        TencentImConfig.ver = ver;
+    }
+
+    public static void setAsync(boolean async) {
+        TencentImConfig.async = async;
+    }
 }

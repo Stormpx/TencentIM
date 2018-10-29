@@ -6,6 +6,7 @@ public class GeneralResponse {
     private String ActionStatus;
     private String ErrorInfo;
     private Integer ErrorCode;
+    private String ErrorDisplay;
     private JSONObject responseResult;
     public String getActionStatus() {
         return ActionStatus;
@@ -38,8 +39,22 @@ public class GeneralResponse {
         this.responseResult = responseResult;
     }
 
+    public String getErrorDisplay() {
+        return ErrorDisplay;
+    }
+
+    public void setErrorDisplay(String errorDisplay) {
+        ErrorDisplay = errorDisplay;
+    }
+
     @Override
     public String toString() {
-        return "GeneralResponse{" + "ActionStatus='" + ActionStatus + '\'' + ", ErrorInfo='" + ErrorInfo + '\'' + ", ErrorCode=" + ErrorCode + ", responseResult=" + responseResult + '}';
+        return "GeneralResponse{" +
+                "ActionStatus='" + ActionStatus + '\'' +
+                ", ErrorInfo='" + ErrorInfo + '\'' +
+                ", ErrorCode=" + ErrorCode +
+                ", ErrorDisplay='" + ErrorDisplay + '\'' +
+                ", responseResult=" + responseResult +
+                '}';
     }
 }
