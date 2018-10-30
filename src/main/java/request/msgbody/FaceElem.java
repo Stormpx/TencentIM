@@ -2,11 +2,11 @@ package request.msgbody;
 
 public class FaceElem extends Element {
     public Integer getIndex() {
-        return index;
+        return Index;
     }
 
     public FaceElem setIndex(Integer index) {
-        this.index = index;return this;
+        this.Index = index;return this;
     }
 
     public String getData() {

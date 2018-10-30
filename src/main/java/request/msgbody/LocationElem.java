@@ -2,26 +2,26 @@ package request.msgbody;
 
 public class LocationElem extends Element{
     public String getDesc() {
-        return desc;
+        return Desc;
     }
 
     public LocationElem setDesc(String desc) {
-        this.desc = desc;return this;
+        this.Desc = desc;return this;
     }
 
     public Double getLatitude() {
-        return latitude;
+        return Latitude;
     }
 
     public LocationElem setLatitude(Double latitude) {
-        this.latitude = latitude;return this;
+        this.Latitude = latitude;return this;
     }
 
     public Double getLongitude() {
-        return longitude;
+        return Longitude;
     }
 
     public LocationElem setLongitude(Double longitude) {
-        this.longitude = longitude;return this;
+        this.Longitude = longitude;return this;
     }
 }

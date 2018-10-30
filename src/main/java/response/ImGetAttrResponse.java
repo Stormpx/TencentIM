@@ -5,7 +5,7 @@ import model.AccountAttrs;
 
 import java.util.List;
 
-public class ImGetAttrResponse {
+public class ImGetAttrResponse extends GeneralResponse{
     private List<AccountAttrs> userAttrs;
 
     public List<AccountAttrs> getUserAttrs() {

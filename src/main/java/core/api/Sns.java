@@ -2,52 +2,51 @@ package core.api;
 
 import annotation.ServiceName;
 import core.enhance.Academy;
-import request.openmsgsvc.GetHistory;
 import request.sns.*;
 
 @ServiceName("sns")
 public class Sns {
     private final static String serviceName="sns";
-    public FriendAdd friendAddPrepare(){
-        return (FriendAdd) Academy.requestEnhance(new FriendAdd(serviceName));
+    public FriendAddRequest friendAddPrepare(){
+        return (FriendAddRequest) Academy.requestEnhance(new FriendAddRequest(serviceName));
     }
-    public FriendImport friendImportPrepare(){
-        return (FriendImport) Academy.requestEnhance(new FriendImport(serviceName));
+    public FriendImportRequest friendImportPrepare(){
+        return (FriendImportRequest) Academy.requestEnhance(new FriendImportRequest(serviceName));
     }
-    public FriendUpdate friendUpdatePrepare(){
-        return (FriendUpdate) Academy.requestEnhance(new FriendUpdate(serviceName));
+    public FriendUpdateRequest friendUpdatePrepare(){
+        return (FriendUpdateRequest) Academy.requestEnhance(new FriendUpdateRequest(serviceName));
     }
-    public FriendDelete friendDeletePrepare(){
-        return (FriendDelete) Academy.requestEnhance(new FriendDelete(serviceName));
+    public FriendDeleteRequest friendDeletePrepare(){
+        return (FriendDeleteRequest) Academy.requestEnhance(new FriendDeleteRequest(serviceName));
     }
-    public FriendDeleteAll friendDeleteAllPrepare(){
-        return (FriendDeleteAll) Academy.requestEnhance(new FriendDeleteAll(serviceName));
+    public FriendDeleteAllRequest friendDeleteAllPrepare(){
+        return (FriendDeleteAllRequest) Academy.requestEnhance(new FriendDeleteAllRequest(serviceName));
     }
-    public FriendCheck friendCheckPrepare(){
-        return (FriendCheck) Academy.requestEnhance(new FriendCheck(serviceName));
+    public FriendCheckRequest friendCheckPrepare(){
+        return (FriendCheckRequest) Academy.requestEnhance(new FriendCheckRequest(serviceName));
     }
-    public FriendGetAll friendGetAllPrepare(){
-        return (FriendGetAll) Academy.requestEnhance(new FriendGetAll(serviceName));
+    public FriendGetAllRequest friendGetAllPrepare(){
+        return (FriendGetAllRequest) Academy.requestEnhance(new FriendGetAllRequest(serviceName));
     }
-    public FriendGetList friendGetListPrepare(){
-        return (FriendGetList) Academy.requestEnhance(new FriendGetList(serviceName));
+    public FriendGetListRequest friendGetListPrepare(){
+        return (FriendGetListRequest) Academy.requestEnhance(new FriendGetListRequest(serviceName));
     }
-    public BlackListAdd blackListAddPrepare(){
-        return (BlackListAdd) Academy.requestEnhance(new BlackListAdd(serviceName));
+    public BlackListAddRequest blackListAddPrepare(){
+        return (BlackListAddRequest) Academy.requestEnhance(new BlackListAddRequest(serviceName));
     }
-    public BlackListDelete blackListDeletePrepare(){
-        return (BlackListDelete) Academy.requestEnhance(new BlackListDelete(serviceName));
+    public BlackListDeleteRequest blackListDeletePrepare(){
+        return (BlackListDeleteRequest) Academy.requestEnhance(new BlackListDeleteRequest(serviceName));
     }
-    public BlackListGet blackListGetPrepare(){
-        return (BlackListGet) Academy.requestEnhance(new BlackListGet(serviceName));
+    public BlackListGetRequest blackListGetPrepare(){
+        return (BlackListGetRequest) Academy.requestEnhance(new BlackListGetRequest(serviceName));
     }
-    public BlackListCheck blackListCheckPrepare(){
-        return (BlackListCheck) Academy.requestEnhance(new BlackListCheck(serviceName));
+    public BlackListCheckRequest blackListCheckPrepare(){
+        return (BlackListCheckRequest) Academy.requestEnhance(new BlackListCheckRequest(serviceName));
     }
-    public GroupAdd groupAddPrepare(){
-        return (GroupAdd) Academy.requestEnhance(new GroupAdd(serviceName));
+    public GroupAddRequest groupAddPrepare(){
+        return (GroupAddRequest) Academy.requestEnhance(new GroupAddRequest(serviceName));
     }
-    public GroupDelete groupDeletePrepare(){
-        return (GroupDelete) Academy.requestEnhance(new GroupDelete(serviceName));
+    public GroupDeleteRequest groupDeletePrepare(){
+        return (GroupDeleteRequest) Academy.requestEnhance(new GroupDeleteRequest(serviceName));
     }
 }

@@ -7,7 +7,6 @@ public class GeneralResponse {
     private String ErrorInfo;
     private Integer ErrorCode;
     private String ErrorDisplay;
-    private JSONObject responseResult;
     public String getActionStatus() {
         return ActionStatus;
     }
@@ -31,13 +30,6 @@ public class GeneralResponse {
         ErrorCode = errorCode;
     }
 
-    public JSONObject getResponseResult() {
-        return responseResult;
-    }
-
-    public void setResponseResult(JSONObject responseResult) {
-        this.responseResult = responseResult;
-    }
 
     public String getErrorDisplay() {
         return ErrorDisplay;
@@ -54,7 +46,9 @@ public class GeneralResponse {
                 ", ErrorInfo='" + ErrorInfo + '\'' +
                 ", ErrorCode=" + ErrorCode +
                 ", ErrorDisplay='" + ErrorDisplay + '\'' +
-                ", responseResult=" + responseResult +
                 '}';
+    }
+    public static void test(String json,Class c){
+        System.out.println(JSONObject.toJSONString(JSONObject.parseObject(json,c)));
     }
 }

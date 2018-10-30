@@ -1,9 +1,9 @@
 package request.openim.push;
 
 import annotation.Command;
-import request.GeneralModel;
+import request.GeneralRequest;
 @Command("im_get_attr_name")
-public class ImGetAttrName extends GeneralModel {
+public class ImGetAttrName extends GeneralRequest {
 
     public ImGetAttrName(String serviceName) {
         super(serviceName);

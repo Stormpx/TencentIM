@@ -1,20 +1,19 @@
 package response;
 
-import com.alibaba.fastjson.JSONObject;
 import model.ResultItem;
 
 import java.util.List;
 
-public class FriendAddResponse {
+public class FriendAddResponse  extends GeneralResponse{
     private List<ResultItem> ResultItem;
     private List<String> Fail_Account;
     private List<String> Invalid_Account;
 
-    public List<model.ResultItem> getResultItem() {
+    public List<ResultItem> getResultItem() {
         return ResultItem;
     }
 
-    public void setResultItem(List<model.ResultItem> resultItem) {
+    public void setResultItem(List<ResultItem> resultItem) {
         ResultItem = resultItem;
     }
 

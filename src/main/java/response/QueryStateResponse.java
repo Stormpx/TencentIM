@@ -4,7 +4,7 @@ import model.QueryResult;
 
 import java.util.List;
 
-public class QueryStateResponse {
+public class QueryStateResponse extends GeneralResponse{
     private List<QueryResult> QueryResult;
 
     public List<model.QueryResult> getQueryResult() {

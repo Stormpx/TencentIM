@@ -1,8 +1,10 @@
 package response;
 
+import model.BatchSendMsgError;
+
 import java.util.List;
 
-public class BatchSendMsgResponse {
+public class BatchSendMsgResponse extends GeneralResponse {
     private List<BatchSendMsgError> ErrorList;
 
     public List<BatchSendMsgError> getErrorList() {

@@ -1,12 +1,12 @@
 package request.msgbody;
 
 public class TextElem extends Element {
-
     public String getText() {
-        return text;
+        return Text;
     }
 
     public TextElem setText(String text) {
-        this.text = text;return this;
+        this.Text = text;
+        return this;
     }
 }

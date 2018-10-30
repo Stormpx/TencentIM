@@ -1,8 +1,10 @@
 package response;
 
+import model.PushReport;
+
 import java.util.List;
 
-public class ImGetPushReportResponse {
+public class ImGetPushReportResponse extends GeneralResponse{
     private List<PushReport> Reports;
 
     public List<PushReport> getReports() {

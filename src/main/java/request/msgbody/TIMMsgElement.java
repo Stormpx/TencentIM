@@ -4,24 +4,24 @@ import com.alibaba.fastjson.annotation.JSONField;
 
 public class TIMMsgElement {
     @JSONField(name = "MsgType")
-    private String msgType;
+    private String MsgType;
     @JSONField(name = "MsgContent")
-    private Element msgContent;
+    private Element MsgContent;
 
 
     public String getMsgType() {
-        return msgType;
+        return MsgType;
     }
 
     public TIMMsgElement setMsgType(String msgType) {
-        this.msgType = msgType;return this;
+        MsgType = msgType;return this;
     }
 
-    public Object getMsgContent() {
-        return msgContent;
+    public Element getMsgContent() {
+        return MsgContent;
     }
 
     public TIMMsgElement setMsgContent(Element msgContent) {
-        this.msgContent = msgContent;return this;
+        MsgContent = msgContent;return this;
     }
 }

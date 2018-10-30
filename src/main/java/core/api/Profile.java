@@ -2,16 +2,16 @@ package core.api;
 
 import annotation.ServiceName;
 import core.enhance.Academy;
-import request.profile.PortraitGet;
-import request.profile.PortraitSet;
+import request.profile.PortraitGetRequest;
+import request.profile.PortraitSetRequest;
 
 @ServiceName("profile")
 public class Profile  {
     private final static String serviceName="profile";
-    public PortraitGet portraitGetPrepare(){
-        return (PortraitGet) Academy.requestEnhance(new PortraitGet(serviceName));
+    public PortraitGetRequest portraitGetPrepare(){
+        return (PortraitGetRequest) Academy.requestEnhance(new PortraitGetRequest(serviceName));
     }
-    public PortraitSet portraitSetPrepare(){
-        return (PortraitSet) Academy.requestEnhance(new PortraitSet(serviceName));
+    public PortraitSetRequest portraitSetPrepare(){
+        return (PortraitSetRequest) Academy.requestEnhance(new PortraitSetRequest(serviceName));
     }
 }

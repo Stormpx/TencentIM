@@ -3,24 +3,22 @@ package core.notice;
 import com.alibaba.fastjson.JSONObject;
 import io.netty.handler.codec.http.HttpHeaders;
 import org.asynchttpclient.*;
-import response.AsyncCoverResult;
-import response.CoverResult;
+import response.result.AsyncCoverResult;
+import response.result.CoverResult;
 import response.GeneralResponse;
 
 import java.nio.charset.Charset;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 public class AsyncHttpClient implements HttpClient{
     private final static DefaultAsyncHttpClient asyncHttpClient=new DefaultAsyncHttpClient();
 
 
     @Override
-    public CoverResult request(String url, JSONObject param){
+    public CoverResult request(String url, JSONObject param,Class responseClass){
         System.out.println(param.toJSONString());
         BoundRequestBuilder boundRequestBuilder = asyncHttpClient.preparePost(url);
         boundRequestBuilder = requestBuilder(boundRequestBuilder, param);
-        ListenableFuture<GeneralResponse> future = boundRequestBuilder.execute(new AsyncHandler<GeneralResponse>() {
+        ListenableFuture<JSONObject> future = boundRequestBuilder.execute(new AsyncHandler<JSONObject>() {
             private StringBuffer sb=new StringBuffer();
             @Override
             public State onStatusReceived(HttpResponseStatus responseStatus) throws Exception {
@@ -40,15 +38,15 @@ public class AsyncHttpClient implements HttpClient{
             }
 
             @Override
-            public GeneralResponse onCompleted() throws Exception {
-                GeneralResponse generalResponse=new GeneralResponse();
+            public JSONObject onCompleted() throws Exception {
                 JSONObject json = JSONObject.parseObject(sb.toString());
+                /*GeneralResponse generalResponse=new GeneralResponse();
                 generalResponse.setActionStatus((String) json.remove("ActionStatus"));
                 generalResponse.setErrorCode((Integer) json.remove("ErrorCode"));
                 generalResponse.setErrorInfo((String) json.remove("ErrorInfo"));
                 generalResponse.setErrorDisplay((String) json.remove("ErrorDisplay"));
-                generalResponse.setResponseResult(json);
-                return generalResponse;
+                generalResponse.setResponseResult(json);*/
+                return json;
             }
 
             @Override
@@ -56,7 +54,7 @@ public class AsyncHttpClient implements HttpClient{
                 t.printStackTrace();
             }
         });
-        return new AsyncCoverResult(future);
+        return new AsyncCoverResult(future,responseClass);
     }
     public BoundRequestBuilder requestBuilder(BoundRequestBuilder requestBuilder,JSONObject jsonObject){
         requestBuilder.setBody(jsonObject.toJSONString());

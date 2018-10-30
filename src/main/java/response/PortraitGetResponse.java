@@ -6,7 +6,7 @@ import model.UserProfileItem;
 
 import java.util.List;
 
-public class PortraitGetResponse {
+public class PortraitGetResponse extends GeneralResponse{
     private List<UserProfileItem> UserProfileItem;
     private List<String> Fail_Account;
     private List<String> Invalid_Account;

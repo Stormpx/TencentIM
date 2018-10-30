@@ -1,35 +1,48 @@
 package request.msgbody;
 
 public class CustomElem extends Element {
+    @Override
     public String getDesc() {
-        return desc;
+        return Desc;
     }
 
+    @Override
     public CustomElem setDesc(String desc) {
-        this.desc = desc;return this;
+        this.Desc = desc;
+        return this;
     }
 
+    @Override
     public String getData() {
         return data;
     }
 
+    @Override
     public CustomElem setData(String data) {
-        this.data = data;return this;
+        this.data = data;
+        return this;
     }
 
+    @Override
     public String getExt() {
-        return ext;
+        return Ext;
     }
 
+    @Override
     public CustomElem setExt(String ext) {
-        this.ext = ext;return this;
+        this.Ext = ext;
+        return this;
     }
 
+    @Override
     public String getSound() {
-        return sound;
+        return Sound;
     }
 
+    @Override
     public CustomElem setSound(String sound) {
-        this.sound = sound;return this;
+        this.Sound = sound;
+        return this;
     }
+
 }

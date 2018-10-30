@@ -2,62 +2,62 @@ package core.api;
 
 import annotation.ServiceName;
 import core.enhance.Academy;
-import request.openim.line.QueryState;
-import request.openim.msg.BatchSendMsg;
+import request.openim.line.QueryStateRequest;
+import request.openim.msg.BatchSendMsgRequest;
 import request.openim.push.*;
-import request.openim.msg.SendMsg;
+import request.openim.msg.SendMsgRequest;
 
 @ServiceName("openim")
 public class OpenIm {
     private final static String serviceName = "openim";
 
-    public SendMsg sendMsgPrepare() {
-        return (SendMsg) Academy.requestEnhance(new SendMsg(serviceName));
+    public SendMsgRequest sendMsgPrepare() {
+        return (SendMsgRequest) Academy.requestEnhance(new SendMsgRequest(serviceName));
     }
 
-    public BatchSendMsg batchSendMsgPrepare() {
-        return (BatchSendMsg) Academy.requestEnhance(new BatchSendMsg(serviceName));
+    public BatchSendMsgRequest batchSendMsgPrepare() {
+        return (BatchSendMsgRequest) Academy.requestEnhance(new BatchSendMsgRequest(serviceName));
     }
 
-    public ImportMsg importMsgPrepare() {
-        return (ImportMsg) Academy.requestEnhance(new ImportMsg(serviceName));
+    public ImportMsgRequest importMsgPrepare() {
+        return (ImportMsgRequest) Academy.requestEnhance(new ImportMsgRequest(serviceName));
     }
 
-    public ImPush imPushPrepare(){
-        return (ImPush) Academy.requestEnhance(new ImPush(serviceName));
+    public ImPushRequest imPushPrepare(){
+        return (ImPushRequest) Academy.requestEnhance(new ImPushRequest(serviceName));
     }
-    public ImGetPushReport imGetPushReportPrepare() {
-        return (ImGetPushReport) Academy.requestEnhance(new ImGetPushReport(serviceName));
+    public ImGetPushReportRequest imGetPushReportPrepare() {
+        return (ImGetPushReportRequest) Academy.requestEnhance(new ImGetPushReportRequest(serviceName));
     }
 
-    public ImSetAttrName imSetAttrNamePrepare() {
-        return (ImSetAttrName) Academy.requestEnhance(new ImSetAttrName(serviceName));
+    public ImSetAttrNameRequest imSetAttrNamePrepare() {
+        return (ImSetAttrNameRequest) Academy.requestEnhance(new ImSetAttrNameRequest(serviceName));
     }
 
     public ImGetAttrName imGetAttrNamePrepare() {
         return (ImGetAttrName) Academy.requestEnhance(new ImGetAttrName(serviceName));
     }
 
-    public ImSetAttr imSetAttrPrepare() {
-        return (ImSetAttr) Academy.requestEnhance(new ImSetAttr(serviceName));
+    public ImSetAttrRequest imSetAttrPrepare() {
+        return (ImSetAttrRequest) Academy.requestEnhance(new ImSetAttrRequest(serviceName));
     }
-    public ImRemoveAttr imRemoveAttrPrepare(){return (ImRemoveAttr)Academy.requestEnhance(new ImRemoveAttr(serviceName));}
-    public ImGetAttr imGetAttrPrepare(){
-        return (ImGetAttr) Academy.requestEnhance(new ImGetAttr(serviceName));
+    public ImRemoveAttrRequest imRemoveAttrPrepare(){return (ImRemoveAttrRequest)Academy.requestEnhance(new ImRemoveAttrRequest(serviceName));}
+    public ImGetAttrRequest imGetAttrPrepare(){
+        return (ImGetAttrRequest) Academy.requestEnhance(new ImGetAttrRequest(serviceName));
     }
-    public ImAddTag imAddTagPrepare(){
-        return (ImAddTag) Academy.requestEnhance(new ImAddTag(serviceName));
+    public ImAddTagRequest imAddTagPrepare(){
+        return (ImAddTagRequest) Academy.requestEnhance(new ImAddTagRequest(serviceName));
     }
-    public ImGetTag imGetTagPrepare(){
-        return (ImGetTag) Academy.requestEnhance(new ImGetTag(serviceName));
+    public ImGetTagRequest imGetTagPrepare(){
+        return (ImGetTagRequest) Academy.requestEnhance(new ImGetTagRequest(serviceName));
     }
-    public ImRemoveTag imRemoveTagPrepare(){
-        return (ImRemoveTag) Academy.requestEnhance(new ImRemoveTag(serviceName));
+    public ImRemoveTagRequest imRemoveTagPrepare(){
+        return (ImRemoveTagRequest) Academy.requestEnhance(new ImRemoveTagRequest(serviceName));
     }
-    public ImRemoveAllTags imRemoveAllTagsPrepare(){
-        return (ImRemoveAllTags) Academy.requestEnhance(new ImRemoveAllTags(serviceName));
+    public ImRemoveAllTagsRequest imRemoveAllTagsPrepare(){
+        return (ImRemoveAllTagsRequest) Academy.requestEnhance(new ImRemoveAllTagsRequest(serviceName));
     }
-    public QueryState queryStatePrepare(){
-        return (QueryState) Academy.requestEnhance(new QueryState(serviceName));
+    public QueryStateRequest queryStatePrepare(){
+        return (QueryStateRequest) Academy.requestEnhance(new QueryStateRequest(serviceName));
     }
 }

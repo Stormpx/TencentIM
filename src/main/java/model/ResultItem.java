@@ -2,6 +2,7 @@ package model;
 
 public class ResultItem {
     private String To_Account;
+    private String Relation;
     private Integer ResultCode;
     private String ResultInfo;
 
@@ -27,5 +28,13 @@ public class ResultItem {
 
     public void setResultInfo(String resultInfo) {
         ResultInfo = resultInfo;
+    }
+
+    public String getRelation() {
+        return Relation;
+    }
+
+    public void setRelation(String relation) {
+        Relation = relation;
     }
 }

@@ -1,15 +1,15 @@
 package core.enhance;
 
 import net.sf.cglib.proxy.Enhancer;
-import request.GeneralModel;
+import request.GeneralRequest;
 
 
 public class Academy {
 
-    public static GeneralModel requestEnhance(final GeneralModel generalModel){
+    public static GeneralRequest requestEnhance(final GeneralRequest generalRequest){
         Enhancer enhancer = new Enhancer();
-        enhancer.setSuperclass(generalModel.getClass());
+        enhancer.setSuperclass(generalRequest.getClass());
         enhancer.setCallback(new RequestMethodInterceptor());
-        return (GeneralModel) enhancer.create(new Class[]{String.class},new Object[]{generalModel.getServiceName()});
+        return (GeneralRequest) enhancer.create(new Class[]{String.class},new Object[]{generalRequest.getServiceName()});
     }
 }

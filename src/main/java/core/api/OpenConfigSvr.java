@@ -2,16 +2,16 @@ package core.api;
 
 import annotation.ServiceName;
 import core.enhance.Academy;
-import request.openconfigsvr.GetNoSpeaking;
-import request.openconfigsvr.SetNoSpeaking;
+import request.openconfigsvr.GetNoSpeakingRequest;
+import request.openconfigsvr.SetNoSpeakingRequest;
 
 @ServiceName("openconfigsvr")
 public class OpenConfigSvr {
     private final static String serviceName="openconfigsvr";
-    public SetNoSpeaking setNoSpeakingPrepare(){
-        return (SetNoSpeaking) Academy.requestEnhance(new SetNoSpeaking(serviceName));
+    public SetNoSpeakingRequest setNoSpeakingPrepare(){
+        return (SetNoSpeakingRequest) Academy.requestEnhance(new SetNoSpeakingRequest(serviceName));
     }
-    public GetNoSpeaking getNoSpeakingPrepare(){
-        return (GetNoSpeaking) Academy.requestEnhance(new GetNoSpeaking(serviceName));
+    public GetNoSpeakingRequest getNoSpeakingPrepare(){
+        return (GetNoSpeakingRequest) Academy.requestEnhance(new GetNoSpeakingRequest(serviceName));
     }
 }

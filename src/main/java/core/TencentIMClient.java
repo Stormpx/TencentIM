@@ -2,29 +2,30 @@ package core;
 
 import config.TencentImConfig;
 import core.api.*;
-import org.apache.commons.configuration.Configuration;
-import org.apache.commons.configuration.ConfigurationException;
-import org.apache.commons.configuration.PropertiesConfiguration;
-import request.imopenloginsvc.AccountImport;
+import request.imopenloginsvc.MultiAccountImportRequest;
 import request.msgbody.TIMMsgElement;
 import request.msgbody.TextElem;
-import request.openim.line.QueryState;
-import request.openim.msg.SendMsg;
-import response.CoverResult;
+import request.openim.msg.BatchSendMsgRequest;
+import request.openim.msg.SendMsgRequest;
+import request.openim.push.ImportMsgRequest;
+import response.BatchSendMsgResponse;
+import response.result.CoverResult;
 import response.GeneralResponse;
 import util.MsgType;
 
+import java.util.Date;
+
 public class TencentIMClient {
 
-    private ImOpenLoginSvc imOpenLoginSvc = new ImOpenLoginSvc();
-    private RegistrationService registrationService = new RegistrationService();
-    private OpenIm openIm = new OpenIm();
-    private GroupOpenHttpSvc groupOpenHttpSvc=new GroupOpenHttpSvc();
-    private OpenConfigSvr openConfigSvr=new OpenConfigSvr();
-    private OpenimDirtyWords openimDirtyWords=new OpenimDirtyWords();
-    private OpenMsgSvc openMsgSvc=new OpenMsgSvc();
-    private Profile profile=new Profile();
-    private Sns sns=new Sns();
+    private static ImOpenLoginSvc imOpenLoginSvc = new ImOpenLoginSvc();
+    private static RegistrationService registrationService = new RegistrationService();
+    private static OpenIm openIm = new OpenIm();
+    private static GroupOpenHttpSvc groupOpenHttpSvc=new GroupOpenHttpSvc();
+    private static OpenConfigSvr openConfigSvr=new OpenConfigSvr();
+    private static OpenimDirtyWords openimDirtyWords=new OpenimDirtyWords();
+    private static OpenMsgSvc openMsgSvc=new OpenMsgSvc();
+    private static Profile profile=new Profile();
+    private static Sns sns=new Sns();
 
     public TencentIMClient(String filePath) {
 
@@ -71,16 +72,49 @@ public class TencentIMClient {
 
     public static void main(String[] args) {
         TencentIMClient tencentIMClient = new TencentIMClient("tencentIm.properties");
-        SendMsg sendMsg = tencentIMClient.openIm().sendMsgPrepare();
-        sendMsg.setSyncOtherMachine(1)
-                .setFrom_Account("547426153")
-                .setTo_Account("19927598517")
-                .setMsgBody(new TIMMsgElement().setMsgType(MsgType.TIMTEXTELEM)
-                                                .setMsgContent(new TextElem()
-                                                .setText("hello")));
 
-        CoverResult result = sendMsg.execute();
+
+
+
+
+
+
+
+
+        /*ImportMsgRequest importMsgRequest = tencentIMClient.openIm().importMsgPrepare();
+        importMsgRequest.setSyncOtherMachine(2)
+                        .setFromAccount("547426153")
+                        .setToAccount("user2")
+                        .setMsgTimeStamp(System.currentTimeMillis()/1000)
+                        .setMsgBody(new TIMMsgElement().setMsgType(MsgType.TIMTEXTELEM)
+                                                        .setMsgContent(new TextElem()
+                                                                .setText("ganjinhuiwo")));
+        CoverResult<GeneralResponse> result = importMsgRequest.execute();
         GeneralResponse generalResponse = result.get();
-        System.out.println(generalResponse);
+        System.out.println(generalResponse);*/
+
+
+
+
+
+
+
+
+        /*BatchSendMsgRequest batchSendMsgRequest = tencentIMClient.openIm().batchSendMsgPrepare();
+        batchSendMsgRequest.setSyncOtherMachine(1)
+                            .setTo_Account("user1","user2","user3","user4")
+                            .setMsgBody(new TIMMsgElement().setMsgType(MsgType.TIMTEXTELEM)
+                                                            .setMsgContent(new TextElem().setText("hello")),
+                                        new TIMMsgElement().setMsgType(MsgType.TIMTEXTELEM)
+                                                            .setMsgContent(new TextElem().setText("call me")));
+        CoverResult<BatchSendMsgResponse> result = batchSendMsgRequest.execute();
+        BatchSendMsgResponse batchSendMsgResponse = result.get();
+        System.out.println(batchSendMsgResponse);*/
+
+
+        /*MultiAccountImportRequest multiAccountImportRequest = tencentIMClient.imOpenLoginSvc().multiaccountImportPrepare();
+        CoverResult<GeneralResponse> result = multiAccountImportRequest.setAccounts("18028597388", "user1", "user2", "user3", "user4").execute();
+        GeneralResponse generalResponse = result.get();
+        System.out.println(generalResponse);*/
     }
 }

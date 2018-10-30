@@ -16,7 +16,7 @@
     <orderEntry type="library" name="Maven: org.ow2.asm:asm:6.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.ant:ant:1.10.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.ant:ant-launcher:1.10.3" level="project" />
-    <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.49" level="project" />
+    <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.51" level="project" />
     <orderEntry type="library" name="Maven: org.asynchttpclient:async-http-client:2.5.4" level="project" />
     <orderEntry type="library" name="Maven: org.asynchttpclient:async-http-client-netty-utils:2.5.4" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-buffer:4.1.30.Final" level="project" />
