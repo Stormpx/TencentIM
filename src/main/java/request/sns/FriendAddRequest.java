@@ -54,7 +54,11 @@ public class FriendAddRequest extends SnsRequest<FriendAddResponse> {
     }
 
     public FriendAddRequest setAddFriendItem(List<FriendItem> addFriendItem) {
-        this.addFriendItem = addFriendItem;return this;
+        if (this.addFriendItem !=null){
+            this.addFriendItem.addAll(addFriendItem);
+        }
+        this.addFriendItem = addFriendItem;
+        return this;
     }
     public FriendAddRequest setAddFriendItem(FriendItem... addFriendItem) {
         if (this.addFriendItem==null){

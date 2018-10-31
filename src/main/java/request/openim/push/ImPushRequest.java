@@ -5,7 +5,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 import model.Condition;
 import org.apache.commons.lang3.RandomUtils;
 import request.GeneralRequest;
-import request.msgbody.TIMMsgElement;
+import model.msgbody.TIMMsgElement;
 import response.ImPushResponse;
 import util.VariableUtil;
 

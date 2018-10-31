@@ -1,4 +1,4 @@
-package request.msgbody;
+package model.msgbody;
 
 public class LocationElem extends Element{
     public String getDesc() {

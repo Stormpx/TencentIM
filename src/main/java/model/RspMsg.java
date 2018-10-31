@@ -1,6 +1,6 @@
 package model;
 
-import request.msgbody.TIMMsgElement;
+import model.msgbody.TIMMsgElement;
 
 import java.util.List;
 

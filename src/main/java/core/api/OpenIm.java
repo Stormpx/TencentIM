@@ -34,8 +34,8 @@ public class OpenIm {
         return (ImSetAttrNameRequest) Academy.requestEnhance(new ImSetAttrNameRequest(serviceName));
     }
 
-    public ImGetAttrName imGetAttrNamePrepare() {
-        return (ImGetAttrName) Academy.requestEnhance(new ImGetAttrName(serviceName));
+    public ImGetAttrNameRequest imGetAttrNamePrepare() {
+        return (ImGetAttrNameRequest) Academy.requestEnhance(new ImGetAttrNameRequest(serviceName));
     }
 
     public ImSetAttrRequest imSetAttrPrepare() {

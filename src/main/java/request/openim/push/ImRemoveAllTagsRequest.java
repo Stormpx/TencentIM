@@ -19,7 +19,7 @@ public class ImRemoveAllTagsRequest extends GeneralRequest<GeneralResponse> {
     }
 
     @Override
-    public String checkParam() {
+    protected String checkParam() {
         if (VariableUtil.isEmpty(to_Account)){
             return "To_Account";
         }
@@ -33,7 +33,11 @@ public class ImRemoveAllTagsRequest extends GeneralRequest<GeneralResponse> {
     }
 
     public ImRemoveAllTagsRequest setTo_Account(List<String> to_Account) {
-        this.to_Account = to_Account;return this;
+        if (this.to_Account!=null){
+            this.to_Account .addAll(to_Account);
+        }else{
+        this.to_Account = to_Account;}
+        return this;
     }
     public ImRemoveAllTagsRequest setTo_Account(String... to_Account) {
         if (this.to_Account==null){

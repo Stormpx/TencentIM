@@ -23,7 +23,7 @@ public class AccountImportRequest extends GeneralRequest<GeneralResponse> {
 
 
     @Override
-    public String checkParam() {
+    protected String checkParam() {
         if (StringUtils.isEmpty(Identifier)) {
             return "Identifier";
         } return null;

@@ -4,6 +4,7 @@ import annotation.Command;
 import com.alibaba.fastjson.annotation.JSONField;
 import request.GeneralRequest;
 import response.GeneralResponse;
+import response.SendGroupSystemNotificationResponse;
 import util.VariableUtil;
 
 import java.util.ArrayList;
@@ -11,7 +12,7 @@ import java.util.Collections;
 import java.util.List;
 
 @Command("send_group_system_notification")
-public class SendGroupSystemNotificationRequest extends GeneralRequest<GeneralResponse> {
+public class SendGroupSystemNotificationRequest extends GeneralRequest<SendGroupSystemNotificationResponse> {
     @JSONField(name = "GroupId")
     private String groupId;
     @JSONField(name = "ToMembers_Account")
@@ -23,7 +24,7 @@ public class SendGroupSystemNotificationRequest extends GeneralRequest<GeneralRe
     }
 
     @Override
-    public String checkParam() {
+    protected String checkParam() {
         if (VariableUtil.isEmpty(groupId)){
             return "GroupId";
         }

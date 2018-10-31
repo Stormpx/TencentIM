@@ -34,8 +34,9 @@ public class RequestMethodInterceptor implements MethodInterceptor {
             String command=obj.getClass().getSuperclass().getAnnotation(Command.class).value();
             JSONObject jsonObject = JSONObject.parseObject(JSONObject.toJSONString(obj));
             jsonObject.remove("serviceName");
-            jsonObject.remove("command");
+            //jsonObject.remove("command");
             String url= TencentImConfig.buildRequestUrl(service,command);
+
             CoverResult coverResult = httpClient.request(url, jsonObject,getResponseClass(obj));
             return coverResult;
         }

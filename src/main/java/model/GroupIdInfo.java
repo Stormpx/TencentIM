@@ -1,12 +1,10 @@
 package model;
 
-import com.alibaba.fastjson.annotation.JSONField;
-
 import java.util.List;
 
 public class GroupIdInfo {
-    private List<GroupMember> SelfInfo;
-    private Integer MemberCount;
+    private GroupMember SelfInfo;
+    private Integer MemberNum;
     private Integer MaxMemberNum;
     private String ApplyJoinOption;
     private String ShutUpAllMember;
@@ -25,20 +23,20 @@ public class GroupIdInfo {
     private Long LastMsgTime;
     private Integer NextMsgSeq;
 
-    public List<GroupMember> getSelfInfo() {
+    public GroupMember getSelfInfo() {
         return SelfInfo;
     }
 
-    public void setSelfInfo(List<GroupMember> selfInfo) {
+    public void setSelfInfo(GroupMember selfInfo) {
         SelfInfo = selfInfo;
     }
 
-    public Integer getMemberCount() {
-        return MemberCount;
+    public Integer getMemberNum() {
+        return MemberNum;
     }
 
-    public void setMemberCount(Integer memberCount) {
-        MemberCount = memberCount;
+    public void setMemberNum(Integer memberNum) {
+        MemberNum = memberNum;
     }
 
     public Integer getMaxMemberNum() {

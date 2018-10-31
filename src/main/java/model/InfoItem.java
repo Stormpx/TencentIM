@@ -3,16 +3,16 @@ package model;
 import java.util.List;
 
 public class InfoItem {
-    private String Info_Account;
+    private String To_Account;
     private List<SnsProfileItem> SnsProfileItem;
     private Integer ResultCode;
     private String ResultInfo;
-    public String getInfo_Account() {
-        return Info_Account;
+    public String getTo_Account() {
+        return To_Account;
     }
 
-    public void setInfo_Account(String info_Account) {
-        Info_Account = info_Account;
+    public void setTo_Account(String to_Account) {
+        To_Account = to_Account;
     }
 
     public List<model.SnsProfileItem> getSnsProfileItem() {

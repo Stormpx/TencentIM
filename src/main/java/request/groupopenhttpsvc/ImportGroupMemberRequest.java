@@ -22,7 +22,7 @@ public class ImportGroupMemberRequest extends GeneralRequest<ImportGroupMemberRe
     }
 
     @Override
-    public String checkParam() {
+    protected String checkParam() {
         if (VariableUtil.isEmpty(groupId)){
             return "GroupId";
         }

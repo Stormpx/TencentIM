@@ -20,7 +20,7 @@ public class SetNoSpeakingRequest extends GeneralRequest<GeneralResponse> {
     }
 
     @Override
-    public String checkParam() {
+    protected String checkParam() {
         if (VariableUtil.isEmpty(setAccount)){
             return "Set_Account";
         }

@@ -5,8 +5,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.lang3.StringUtils;
 import request.GeneralRequest;
-import request.msgbody.TIMMsgElement;
-import request.openim.msg.BatchSendMsgRequest;
+import model.msgbody.TIMMsgElement;
 import response.GeneralResponse;
 
 import java.util.Collections;

@@ -1,4 +1,4 @@
-package request.msgbody;
+package model.msgbody;
 
 public class CustomElem extends Element {
     @Override

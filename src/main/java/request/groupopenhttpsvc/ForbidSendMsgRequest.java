@@ -14,8 +14,8 @@ import java.util.List;
 public class ForbidSendMsgRequest extends GeneralRequest<GeneralResponse> {
     @JSONField(name = "GroupId")
     private String groupId;
-    @JSONField(name = "User_Account")
-    private List<String> userAccount;
+    @JSONField(name = "Members_Account")
+    private List<String> memberAccount;
     @JSONField(name = "ShutUpTime")
     private Integer shutUpTime;
 
@@ -24,11 +24,11 @@ public class ForbidSendMsgRequest extends GeneralRequest<GeneralResponse> {
     }
 
     @Override
-    public String checkParam() {
+    protected String checkParam() {
         if (VariableUtil.isEmpty(groupId)){
             return "GroupId";
         }
-        if (VariableUtil.isEmpty(userAccount)){
+        if (VariableUtil.isEmpty(memberAccount)){
             return "User_Account";
         }
         if (shutUpTime==null){
@@ -40,15 +40,15 @@ public class ForbidSendMsgRequest extends GeneralRequest<GeneralResponse> {
         this.groupId = groupId;return this;
     }
 
-    public ForbidSendMsgRequest setUserAccount(List<String> userAccount) {
-        this.userAccount = userAccount;return this;
+    public ForbidSendMsgRequest setMemberAccount(List<String> memberAccount) {
+        this.memberAccount = memberAccount;return this;
     }
 
-    public ForbidSendMsgRequest setUserAccount(String... userAccount) {
-        if (this.userAccount==null){
-            this.userAccount=new ArrayList<>();
+    public ForbidSendMsgRequest setMemberAccount(String... userAccount) {
+        if (this.memberAccount ==null){
+            this.memberAccount =new ArrayList<>();
         }
-        Collections.addAll(this.userAccount,userAccount);
+        Collections.addAll(this.memberAccount,userAccount);
         return this;
     }
 
@@ -64,7 +64,7 @@ public class ForbidSendMsgRequest extends GeneralRequest<GeneralResponse> {
         return groupId;
     }
 
-    public List<String> getUserAccount() {
-        return userAccount;
+    public List<String> getMemberAccount() {
+        return memberAccount;
     }
 }

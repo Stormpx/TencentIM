@@ -2,6 +2,8 @@ package model;
 
 import com.alibaba.fastjson.annotation.JSONField;
 
+import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
 public class UserTag {
@@ -23,6 +25,19 @@ public class UserTag {
     }
 
     public UserTag setTags(List<String> tags) {
-        this.tags = tags;return this;
+        if (this.tags!=null){
+            this.tags.addAll(tags);
+        }
+        else{
+        this.tags = tags;}
+        return this;
+    }
+
+    public UserTag setTags(String... tags) {
+        if (this.tags==null){
+            this.tags=new LinkedList<>();
+        }
+        Collections.addAll(this.tags,tags);
+        return this;
     }
 }

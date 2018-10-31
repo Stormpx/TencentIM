@@ -1,6 +1,7 @@
 package request.openim.push;
 
 import annotation.Command;
+import com.alibaba.fastjson.annotation.JSONField;
 import request.GeneralRequest;
 import response.ImGetTagResponse;
 import util.VariableUtil;
@@ -11,6 +12,7 @@ import java.util.List;
 
 @Command("im_get_tag")
 public class ImGetTagRequest extends GeneralRequest<ImGetTagResponse> {
+    @JSONField(name = "To_Account")
     private List<String> to_Account;
 
     public ImGetTagRequest(String serviceName) {
@@ -18,7 +20,7 @@ public class ImGetTagRequest extends GeneralRequest<ImGetTagResponse> {
     }
 
     @Override
-    public String checkParam() {
+    protected String checkParam() {
         if (VariableUtil.isEmpty(to_Account)){
             return "To_Account";
         }
@@ -31,13 +33,18 @@ public class ImGetTagRequest extends GeneralRequest<ImGetTagResponse> {
         return to_Account;
     }
 
-    public void setTo_Account(List<String> to_Account) {
-        this.to_Account = to_Account;
+    public ImGetTagRequest setTo_Account(List<String> to_Account) {
+        if (this.to_Account!=null){
+            this.to_Account.addAll(to_Account);
+        }else {
+            this.to_Account = to_Account;
+        }
+        return this;
     }
-    public void setTo_Account(String... to_Account) {
+    public ImGetTagRequest setTo_Account(String... to_Account) {
         if (this.to_Account==null){
             this.to_Account=new ArrayList<>();
         }
-        Collections.addAll(this.to_Account,to_Account);
+        Collections.addAll(this.to_Account,to_Account);return this;
     }
 }

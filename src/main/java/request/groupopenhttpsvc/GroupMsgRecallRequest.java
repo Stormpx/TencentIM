@@ -46,8 +46,16 @@ public class GroupMsgRecallRequest extends GeneralRequest<GroupMsgRecallResponse
         return this;
     }
 
+    public String getGroupId() {
+        return groupId;
+    }
+
+    public List<MsgSeq> getMsgSeqList() {
+        return msgSeqList;
+    }
+
     @Override
-    public String checkParam() {
+    protected String checkParam() {
         if (VariableUtil.isEmpty(groupId)){
             return "GroupId";
         }

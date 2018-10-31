@@ -11,6 +11,8 @@ public class ResponseFilter {
     private List<String> groupBaseInfoFilter;
     @JSONField(name = "MemberInfoFilter")
     private List<String> memberInfoFilter;
+    @JSONField(name = "SelfInfoFilter")
+    private List<String> selfInfoFilter;
     @JSONField(name = "AppDefinedDataFilter_Group")
     private List<String> appDefinedDataFilterGroup;
     @JSONField(name = "AppDefinedDataFilter_GroupMember")
@@ -24,6 +26,20 @@ public class ResponseFilter {
         if (this.groupBaseInfoFilter == null) {
             this.groupBaseInfoFilter = new ArrayList<>();
         } Collections.addAll(this.groupBaseInfoFilter, groupBaseInfoFilter); return this;
+
+    }
+
+    public List<String> getSelfInfoFilter() {
+        return selfInfoFilter;
+    }
+
+    public void setSelfInfoFilter(List<String> selfInfoFilter) {
+        this.selfInfoFilter = selfInfoFilter;
+    }
+    public ResponseFilter setSelfInfoFilter(String... selfInfoFilter) {
+        if (this.selfInfoFilter == null) {
+            this.selfInfoFilter = new ArrayList<>();
+        } Collections.addAll(this.selfInfoFilter, selfInfoFilter); return this;
 
     }
 

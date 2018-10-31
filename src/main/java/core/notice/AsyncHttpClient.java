@@ -40,6 +40,7 @@ public class AsyncHttpClient implements HttpClient{
             @Override
             public JSONObject onCompleted() throws Exception {
                 JSONObject json = JSONObject.parseObject(sb.toString());
+                System.out.println(json.toJSONString());
                 /*GeneralResponse generalResponse=new GeneralResponse();
                 generalResponse.setActionStatus((String) json.remove("ActionStatus"));
                 generalResponse.setErrorCode((Integer) json.remove("ErrorCode"));

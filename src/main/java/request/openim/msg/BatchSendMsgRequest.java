@@ -4,8 +4,8 @@ import annotation.Command;
 import com.alibaba.fastjson.annotation.JSONField;
 import org.apache.commons.lang3.RandomUtils;
 import request.GeneralRequest;
-import request.msgbody.OfflinePushInfo;
-import request.msgbody.TIMMsgElement;
+import model.msgbody.OfflinePushInfo;
+import model.msgbody.TIMMsgElement;
 import response.BatchSendMsgResponse;
 
 import java.util.Collections;

@@ -11,7 +11,7 @@ public class DirtyWordsGetRequest extends GeneralRequest<DirtyWordsGetResponse> 
     }
 
     @Override
-    public String checkParam() {
+    protected String checkParam() {
         return null;
     }
 }

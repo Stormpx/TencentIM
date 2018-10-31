@@ -22,7 +22,7 @@ public class PortraitSetRequest extends GeneralRequest<GeneralResponse> {
     }
 
     @Override
-    public String checkParam() {
+    protected String checkParam() {
         if (VariableUtil.isEmpty(fromAccount)){
             return "From_Account";
         }
@@ -45,7 +45,11 @@ public class PortraitSetRequest extends GeneralRequest<GeneralResponse> {
     }
 
     public PortraitSetRequest setProfileItem(List<ProfileTag> profileItem) {
-        this.profileItem = profileItem;return this;
+        if (this.profileItem!=null){
+            this.profileItem.addAll(profileItem);
+        }else{
+        this.profileItem = profileItem;}
+        return this;
     }
 
     public PortraitSetRequest setProfileItem(ProfileTag... profileItem) {

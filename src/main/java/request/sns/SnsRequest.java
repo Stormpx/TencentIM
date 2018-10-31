@@ -13,7 +13,7 @@ public abstract class SnsRequest<T extends GeneralResponse> extends GeneralReque
     }
 
     @Override
-    public String checkParam() {
+    protected String checkParam() {
         if (VariableUtil.isEmpty(fromAccount)){
             return "From_Account";
         }

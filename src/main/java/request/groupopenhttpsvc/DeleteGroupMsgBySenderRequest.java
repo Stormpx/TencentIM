@@ -17,7 +17,7 @@ public class DeleteGroupMsgBySenderRequest extends GeneralRequest<GeneralRespons
     }
 
     @Override
-    public String checkParam() {
+    protected String checkParam() {
         if (VariableUtil.isEmpty(groupId)){
             return "GroupId";
         }

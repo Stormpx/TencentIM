@@ -15,4 +15,5 @@ public class ImGetAttrNameResponse extends GeneralResponse{
     public void setAttrNames(Map<String, String> attrNames) {
         AttrNames = attrNames;
     }
+
 }

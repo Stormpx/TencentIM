@@ -15,7 +15,7 @@ public class DestroyGroupRequest extends GeneralRequest<GeneralResponse> {
     }
 
     @Override
-    public String checkParam() {
+    protected String checkParam() {
         if (VariableUtil.isEmpty(groupId)){
             return "GroupId";
         }

@@ -13,7 +13,7 @@ public class GetAppInfoRequest extends GeneralRequest {
     }
 
     @Override
-    public String checkParam() {
+    protected String checkParam() {
         return null;
     }
 

@@ -29,7 +29,7 @@ public class GetGroupMemberInfoRequest extends GeneralRequest<GetGroupMemberInfo
     }
 
     @Override
-    public String checkParam() {
+    protected String checkParam() {
         if (VariableUtil.isEmpty(groupId)){
             return "GroupId";
         }

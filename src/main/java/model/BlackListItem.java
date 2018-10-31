@@ -1,22 +1,22 @@
 package model;
 
 public class BlackListItem {
-    private String Black_Account;
-    private Integer BlackTimeStamp;
+    private String To_Account;
+    private Integer AddBlackTimeStamp;
 
-    public String getBlack_Account() {
-        return Black_Account;
+    public String getTo_Account() {
+        return To_Account;
     }
 
-    public void setBlack_Account(String black_Account) {
-        Black_Account = black_Account;
+    public void setTo_Account(String to_Account) {
+        To_Account = to_Account;
     }
 
-    public Integer getBlackTimeStamp() {
-        return BlackTimeStamp;
+    public Integer getAddBlackTimeStamp() {
+        return AddBlackTimeStamp;
     }
 
-    public void setBlackTimeStamp(Integer blackTimeStamp) {
-        BlackTimeStamp = blackTimeStamp;
+    public void setAddBlackTimeStamp(Integer addBlackTimeStamp) {
+        AddBlackTimeStamp = addBlackTimeStamp;
     }
 }

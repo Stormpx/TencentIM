@@ -1,20 +1,18 @@
 package response;
 
-import model.ResultItem;
-
 import java.util.List;
 
 public class BlackListCheckResponse extends GeneralResponse{
-    private List<model.ResultItem> ResultItem;
+    private List<model.ResultItem> BlackListCheckItem;
     private List<String> Fail_Account;
     private List<String> Invalid_Account;
 
-    public List<model.ResultItem> getResultItem() {
-        return ResultItem;
+    public List<model.ResultItem> getBlackListCheckItem() {
+        return BlackListCheckItem;
     }
 
-    public void setResultItem(List<model.ResultItem> resultItem) {
-        ResultItem = resultItem;
+    public void setBlackListCheckItem(List<model.ResultItem> blackListCheckItem) {
+        BlackListCheckItem = blackListCheckItem;
     }
 
     public List<String> getFail_Account() {

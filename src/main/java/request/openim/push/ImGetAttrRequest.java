@@ -20,7 +20,7 @@ public class ImGetAttrRequest extends GeneralRequest<ImGetAttrResponse> {
     }
 
     @Override
-    public String checkParam() {
+    protected String checkParam() {
         if (VariableUtil.isEmpty(to_Account)){
             return "To_Account";
         }
@@ -32,7 +32,11 @@ public class ImGetAttrRequest extends GeneralRequest<ImGetAttrResponse> {
     }
 
     public ImGetAttrRequest setTo_Account(List<String> to_Account) {
-        this.to_Account = to_Account;return this;
+        if (this.to_Account!=null){
+            this.to_Account.addAll(to_Account);
+        }else{
+        this.to_Account = to_Account;}
+        return this;
     }
     public ImGetAttrRequest setTo_Account(String... to_Account) {
         if (this.to_Account==null){

@@ -1,4 +1,4 @@
-package request.msgbody;
+package model.msgbody;
 
 import com.alibaba.fastjson.annotation.JSONField;
 

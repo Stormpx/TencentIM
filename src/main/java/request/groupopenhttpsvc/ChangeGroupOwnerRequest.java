@@ -16,7 +16,7 @@ public class ChangeGroupOwnerRequest extends GeneralRequest<GeneralResponse> {
     }
 
     @Override
-    public String checkParam() {
+    protected String checkParam() {
         return null;
     }
 

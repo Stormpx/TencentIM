@@ -25,6 +25,11 @@ public class BlackListDeleteRequest extends SnsRequest<BlackListDeleteResponse> 
         return null;
     }
 
+    public BlackListDeleteRequest setFromAccount(String fromAccount) {
+        super.fromAccount = fromAccount;
+        return this;
+    }
+
     public BlackListDeleteRequest setToAccount(List<String> toAccount) {
         this.toAccount = toAccount;return this;
     }

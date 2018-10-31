@@ -15,7 +15,7 @@ public class GetGroupShuttedUinRequest extends GeneralRequest<GetGroupShuttedUin
     }
 
     @Override
-    public String checkParam() {
+    protected String checkParam() {
         if (VariableUtil.isEmpty(groupId)){
             return "GroupId";
         }

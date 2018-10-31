@@ -1,4 +1,4 @@
-package request.msgbody;
+package model.msgbody;
 
 public class TextElem extends Element {
     public String getText() {

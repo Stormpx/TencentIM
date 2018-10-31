@@ -19,7 +19,7 @@ public class GetHistoryRequest extends GeneralRequest<GetHistoryResponse> {
     }
 
     @Override
-    public String checkParam() {
+    protected String checkParam() {
         if (VariableUtil.isEmpty(chatType)){
             return "ChatType";
         }

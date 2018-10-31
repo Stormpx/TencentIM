@@ -14,13 +14,14 @@ import java.util.List;
 public class FriendImportRequest extends SnsRequest<FriendImportResponse> {
     @JSONField(name = "AddFriendItem")
     private List<FriendItem> addFriendItem;
+
     public FriendImportRequest(String serviceName) {
         super(serviceName);
     }
 
     @Override
     protected String check() {
-        if (VariableUtil.isEmpty(addFriendItem)){
+        if (VariableUtil.isEmpty(addFriendItem)) {
             return "AddFriendItem";
         }
         return null;
@@ -31,16 +32,22 @@ public class FriendImportRequest extends SnsRequest<FriendImportResponse> {
     }
 
     public FriendImportRequest setAddFriendItem(List<FriendItem> addFriendItem) {
-        this.addFriendItem = addFriendItem;return this;
+        if (this.addFriendItem != null) {
+            this.addFriendItem.addAll(addFriendItem);
+        } else {
+            this.addFriendItem = addFriendItem;
+        }
+        return this;
     }
 
     public FriendImportRequest setAddFriendItem(FriendItem... addFriendItem) {
-        if (this.addFriendItem==null){
-            this.addFriendItem=new LinkedList<>();
+        if (this.addFriendItem == null) {
+            this.addFriendItem = new LinkedList<>();
         }
-        Collections.addAll(this.addFriendItem,addFriendItem);
+        Collections.addAll(this.addFriendItem, addFriendItem);
         return this;
     }
+
     public FriendImportRequest setFromAccount(String fromAccount) {
         super.fromAccount = fromAccount;
         return this;

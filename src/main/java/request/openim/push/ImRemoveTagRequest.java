@@ -21,7 +21,7 @@ public class ImRemoveTagRequest extends GeneralRequest<GeneralResponse> {
     }
 
     @Override
-    public String checkParam() {
+    protected String checkParam() {
         if (VariableUtil.isEmpty(userTags)){
             return "UserTags";
         }
@@ -33,7 +33,13 @@ public class ImRemoveTagRequest extends GeneralRequest<GeneralResponse> {
     }
 
     public ImRemoveTagRequest setUserTags(List<UserTag> userTags) {
-        this.userTags = userTags;return this;
+        if (this.userTags!=null){
+            this.userTags.addAll(userTags);
+        }
+        else{
+            this.userTags = userTags;
+        }
+        return this;
     }
     public ImRemoveTagRequest setUserTags(UserTag... userTags) {
         if (this.userTags==null){

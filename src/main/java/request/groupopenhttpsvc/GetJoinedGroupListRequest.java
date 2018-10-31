@@ -24,7 +24,7 @@ public class GetJoinedGroupListRequest extends GeneralRequest<GetJoinedGroupList
     }
 
     @Override
-    public String checkParam() {
+    protected String checkParam() {
         if (VariableUtil.isEmpty(memberAccount)){
             return "Member_Account";
         }
@@ -49,5 +49,25 @@ public class GetJoinedGroupListRequest extends GeneralRequest<GetJoinedGroupList
 
     public GetJoinedGroupListRequest setResponseFilter(ResponseFilter responseFilter) {
         this.responseFilter = responseFilter;return this;
+    }
+
+    public String getMemberAccount() {
+        return memberAccount;
+    }
+
+    public Integer getLimit() {
+        return limit;
+    }
+
+    public Integer getNext() {
+        return next;
+    }
+
+    public String getGroupType() {
+        return groupType;
+    }
+
+    public ResponseFilter getResponseFilter() {
+        return responseFilter;
     }
 }

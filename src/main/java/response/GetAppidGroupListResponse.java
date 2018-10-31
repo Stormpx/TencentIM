@@ -1,11 +1,12 @@
 package response;
 
 import java.util.List;
+import java.util.Map;
 
 public class GetAppidGroupListResponse extends GeneralResponse{
     private Integer TotalCount;
     private Long Next;
-    private List<String> GroupIdList;
+    private List<Map<String,String>> GroupIdList;
 
     public Integer getTotalCount() {
         return TotalCount;
@@ -23,11 +24,11 @@ public class GetAppidGroupListResponse extends GeneralResponse{
         Next = next;
     }
 
-    public List<String> getGroupIdList() {
+    public List<Map<String, String>> getGroupIdList() {
         return GroupIdList;
     }
 
-    public void setGroupIdList(List<String> groupIdList) {
+    public void setGroupIdList(List<Map<String, String>> groupIdList) {
         GroupIdList = groupIdList;
     }
 }

@@ -18,7 +18,7 @@ public class GetAppidGroupListRequest extends GeneralRequest<GetAppidGroupListRe
     }
 
     @Override
-    public String checkParam() {
+    protected String checkParam() {
         return null;
     }
 

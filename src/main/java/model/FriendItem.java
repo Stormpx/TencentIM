@@ -14,7 +14,7 @@ public class FriendItem {
     @JSONField(name = "RemarkTime")
     private String remarkTime;
     @JSONField(name = "GroupName")
-    private List<String> groupName;
+    private String groupName;
     @JSONField(name = "AddSource")
     private String addSource;
     @JSONField(name = "AddWording")
@@ -45,15 +45,8 @@ public class FriendItem {
         this.remarkTime = remarkTime;return this;
     }
 
-    public FriendItem setGroupName(List<String> groupName) {
+    public FriendItem setGroupName(String groupName) {
         this.groupName = groupName;return this;
-    }
-    public FriendItem setGroupName(String... groupName) {
-        if (this.groupName==null){
-            this.groupName=new LinkedList<>();
-        }
-        Collections.addAll(this.groupName,groupName);
-        return this;
     }
 
     public FriendItem setCustomItems(List<CustomItem> customItems) {

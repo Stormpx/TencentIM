@@ -24,7 +24,7 @@ public class AddGroupMemberRequest extends GeneralRequest<AddGroupMemberResponse
     }
 
     @Override
-    public String checkParam() {
+    protected String checkParam() {
         if (VariableUtil.isEmpty(groupId)){
             return "GroupId";
         }
@@ -51,5 +51,17 @@ public class AddGroupMemberRequest extends GeneralRequest<AddGroupMemberResponse
         }
         Collections.addAll(this.memberList,memberList);
         return this;
+    }
+
+    public String getGroupId() {
+        return groupId;
+    }
+
+    public Integer getSilence() {
+        return silence;
+    }
+
+    public List<Member> getMemberList() {
+        return memberList;
     }
 }

@@ -39,7 +39,7 @@ public class ImportGroupRequest extends GeneralRequest<ImportGroupResponse> {
     }
 
     @Override
-    public String checkParam() {
+    protected String checkParam() {
         if (VariableUtil.isEmpty(type)){
             return "Type";
         }
@@ -92,5 +92,49 @@ public class ImportGroupRequest extends GeneralRequest<ImportGroupResponse> {
     public ImportGroupRequest setCreateTime(Integer createTime) {
         this.createTime = createTime;
         return this;
+    }
+
+    public String getOwnerAccount() {
+        return ownerAccount;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getGroupId() {
+        return groupId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getIntroduction() {
+        return introduction;
+    }
+
+    public String getNotification() {
+        return notification;
+    }
+
+    public String getFaceUrl() {
+        return faceUrl;
+    }
+
+    public Integer getMaxMemberCount() {
+        return maxMemberCount;
+    }
+
+    public String getApplyJoinOption() {
+        return applyJoinOption;
+    }
+
+    public List<AppDefinedData> getAppDefinedData() {
+        return appDefinedData;
+    }
+
+    public Integer getCreateTime() {
+        return createTime;
     }
 }

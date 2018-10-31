@@ -6,7 +6,7 @@ import java.util.List;
 
 public class GetGroupShuttedUinResponse extends GeneralResponse{
     private String GroupId;
-    private List<ShuttedUin> ShuttedUin;
+    private List<ShuttedUin> shuttedUinList;
 
     public String getGroupId() {
         return GroupId;
@@ -16,11 +16,11 @@ public class GetGroupShuttedUinResponse extends GeneralResponse{
         GroupId = groupId;
     }
 
-    public List<model.ShuttedUin> getShuttedUin() {
-        return ShuttedUin;
+    public List<model.ShuttedUin> getShuttedUinList() {
+        return shuttedUinList;
     }
 
-    public void setShuttedUin(List<model.ShuttedUin> shuttedUin) {
-        ShuttedUin = shuttedUin;
+    public void setShuttedUinList(List<model.ShuttedUin> shuttedUinList) {
+        this.shuttedUinList = shuttedUinList;
     }
 }

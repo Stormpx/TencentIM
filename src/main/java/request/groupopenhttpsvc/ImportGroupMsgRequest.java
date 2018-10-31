@@ -46,7 +46,7 @@ public class ImportGroupMsgRequest extends GeneralRequest<ImportGroupMsgResponse
     }
 
     @Override
-    public String checkParam() {
+    protected String checkParam() {
         if (VariableUtil.isEmpty(groupId)){
             return "GroupId";
         }

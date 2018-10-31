@@ -24,7 +24,7 @@ public class DeleteGroupMemberRequest extends GeneralRequest<GeneralResponse> {
     }
 
     @Override
-    public String checkParam() {
+    protected String checkParam() {
         return null;
     }
 

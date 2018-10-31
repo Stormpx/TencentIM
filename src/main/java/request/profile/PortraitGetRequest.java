@@ -16,16 +16,17 @@ public class PortraitGetRequest extends GeneralRequest<PortraitGetResponse> {
     private List<String> toAccount;
     @JSONField(name = "TagList")
     private List<String> tagList;
+
     public PortraitGetRequest(String serviceName) {
         super(serviceName);
     }
 
     @Override
-    public String checkParam() {
-        if (VariableUtil.isEmpty(toAccount)){
+    protected String checkParam() {
+        if (VariableUtil.isEmpty(toAccount)) {
             return "To_Account";
         }
-        if (VariableUtil.isEmpty(tagList)){
+        if (VariableUtil.isEmpty(tagList)) {
             return "TagList";
         }
         return null;
@@ -36,29 +37,41 @@ public class PortraitGetRequest extends GeneralRequest<PortraitGetResponse> {
     }
 
     public PortraitGetRequest setToAccount(List<String> toAccount) {
-        this.toAccount = toAccount;return this;
-    }
-    public PortraitGetRequest setToAccount(String... toAccount) {
-        if (this.toAccount==null){
-            this.toAccount =new ArrayList<>();
+        if (this.toAccount != null) {
+            this.toAccount.addAll(toAccount);
+        } else {
+            this.toAccount = toAccount;
         }
-        Collections.addAll(this.toAccount,toAccount);
         return this;
     }
+
+    public PortraitGetRequest setToAccount(String... toAccount) {
+        if (this.toAccount == null) {
+            this.toAccount = new ArrayList<>();
+        }
+        Collections.addAll(this.toAccount, toAccount);
+        return this;
+    }
+
     public List<String> getTagList() {
         return tagList;
     }
 
     public PortraitGetRequest setTagList(List<String> tagList) {
 
-        this.tagList = tagList;return this;
+        if (this.tagList != null) {
+            this.tagList.addAll(tagList);
+        } else {
+            this.tagList = toAccount;
+        }
+        return this;
     }
 
     public PortraitGetRequest setTagList(String... tagList) {
-        if (this.tagList==null){
-            this.tagList =new ArrayList<>();
+        if (this.tagList == null) {
+            this.tagList = new ArrayList<>();
         }
-        Collections.addAll(this.tagList,tagList);
+        Collections.addAll(this.tagList, tagList);
         return this;
     }
 }

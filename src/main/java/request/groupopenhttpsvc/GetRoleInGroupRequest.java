@@ -21,7 +21,7 @@ public class GetRoleInGroupRequest extends GeneralRequest<GetRoleInGroupResponse
     }
 
     @Override
-    public String checkParam() {
+    protected String checkParam() {
         if (VariableUtil.isEmpty(groupId)){
             return "GroupId";
         }

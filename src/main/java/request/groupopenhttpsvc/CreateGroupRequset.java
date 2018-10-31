@@ -42,7 +42,7 @@ public class CreateGroupRequset extends GeneralRequest<CreateGroupResponse> {
     }
 
     @Override
-    public String checkParam() {
+    protected String checkParam() {
         if (VariableUtil.isEmpty(groupType)){
             return "Type";
         }

@@ -16,7 +16,7 @@ public class GetNoSpeakingRequest extends GeneralRequest<GetNoSpeakingResponse> 
     }
 
     @Override
-    public String checkParam() {
+    protected String checkParam() {
         if (VariableUtil.isEmpty(getAccount)){
             return "Get_Account";
         }

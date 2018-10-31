@@ -32,18 +32,18 @@ public abstract class GeneralRequest<T extends GeneralResponse> {
         return null;
     }
 
-    public abstract String checkParam();
+    protected abstract String checkParam();
 
 
     public String getServiceName() {
         return ServiceName;
     }
 
-    public String getCommand(){
+    protected String getCommand(){
         return this.getClass().getSuperclass().getAnnotation(Command.class).value();
     }
 
-    public String getJsonField(String name){
+    protected String getJsonField(String name){
         try {
             return this.getClass().getSuperclass().getField(name).getAnnotation(JSONField.class).name();
         } catch (NoSuchFieldException e) {
@@ -51,7 +51,7 @@ public abstract class GeneralRequest<T extends GeneralResponse> {
         }
         return null;
     }
-    public String getNonSupport(String param,String value){
+    protected String getNonSupport(String param,String value){
         return getCommand()+"@"+param+"@"+value;
     }
 }

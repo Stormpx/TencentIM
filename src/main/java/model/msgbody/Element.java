@@ -1,4 +1,4 @@
-package request.msgbody;
+package model.msgbody;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import response.GeneralResponse;
@@ -31,6 +31,7 @@ public  class Element {
     public String getText() {
         return Text;
     }
+
     public Element setText(String text) {
         this.Text = text;
         return this;
