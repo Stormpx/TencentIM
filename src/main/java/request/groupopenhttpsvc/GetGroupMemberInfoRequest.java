@@ -24,9 +24,6 @@ public class GetGroupMemberInfoRequest extends GeneralRequest<GetGroupMemberInfo
     private List<String> memberRoleFilter;
     @JSONField(name = "AppDefinedDataFilter_GroupMember")
     private List<String> appDefinedDataFilterGroupMember;
-    public GetGroupMemberInfoRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {

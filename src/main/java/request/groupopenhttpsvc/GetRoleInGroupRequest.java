@@ -16,9 +16,6 @@ public class GetRoleInGroupRequest extends GeneralRequest<GetRoleInGroupResponse
     private String groupId;
     @JSONField(name = "User_Account")
     private List<String> userAccount;
-    public GetRoleInGroupRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {

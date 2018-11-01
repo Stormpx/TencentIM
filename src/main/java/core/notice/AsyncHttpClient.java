@@ -3,6 +3,8 @@ package core.notice;
 import com.alibaba.fastjson.JSONObject;
 import io.netty.handler.codec.http.HttpHeaders;
 import org.asynchttpclient.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import response.result.AsyncCoverResult;
 import response.result.CoverResult;
 import response.GeneralResponse;
@@ -10,6 +12,7 @@ import response.GeneralResponse;
 import java.nio.charset.Charset;
 
 public class AsyncHttpClient implements HttpClient{
+    private final static Logger logger=LoggerFactory.getLogger(AsyncHttpClient.class);
     private final static DefaultAsyncHttpClient asyncHttpClient=new DefaultAsyncHttpClient();
 
 
@@ -41,12 +44,6 @@ public class AsyncHttpClient implements HttpClient{
             public JSONObject onCompleted() throws Exception {
                 JSONObject json = JSONObject.parseObject(sb.toString());
                 System.out.println(json.toJSONString());
-                /*GeneralResponse generalResponse=new GeneralResponse();
-                generalResponse.setActionStatus((String) json.remove("ActionStatus"));
-                generalResponse.setErrorCode((Integer) json.remove("ErrorCode"));
-                generalResponse.setErrorInfo((String) json.remove("ErrorInfo"));
-                generalResponse.setErrorDisplay((String) json.remove("ErrorDisplay"));
-                generalResponse.setResponseResult(json);*/
                 return json;
             }
 
@@ -59,6 +56,8 @@ public class AsyncHttpClient implements HttpClient{
     }
     public BoundRequestBuilder requestBuilder(BoundRequestBuilder requestBuilder,JSONObject jsonObject){
         requestBuilder.setBody(jsonObject.toJSONString());
+        requestBuilder.setReadTimeout(4000);
+        requestBuilder.setRequestTimeout(4000);
         return requestBuilder;
     }
 

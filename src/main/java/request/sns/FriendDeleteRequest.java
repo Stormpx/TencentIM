@@ -16,9 +16,6 @@ public class FriendDeleteRequest extends SnsRequest<FriendDeleteResponse> {
     private List<String> toAccount;
     @JSONField(name = "DeleteType")
     private String deleteType;
-    public FriendDeleteRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String check() {

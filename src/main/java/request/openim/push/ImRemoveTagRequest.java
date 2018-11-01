@@ -16,9 +16,6 @@ public class ImRemoveTagRequest extends GeneralRequest<GeneralResponse> {
     @JSONField(name = "UserTags")
     private List<UserTag> userTags;
 
-    public ImRemoveTagRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {

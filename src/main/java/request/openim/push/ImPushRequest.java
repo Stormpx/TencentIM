@@ -24,9 +24,6 @@ public class ImPushRequest extends GeneralRequest<ImPushResponse> {
     private Integer msgLifeTime;
     @JSONField(name = "From_Account")
     private String fromAccount;
-    public ImPushRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     public String checkParam() {

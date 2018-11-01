@@ -7,11 +7,10 @@ import request.openconfigsvr.SetNoSpeakingRequest;
 
 @ServiceName("openconfigsvr")
 public class OpenConfigSvr {
-    private final static String serviceName="openconfigsvr";
     public SetNoSpeakingRequest setNoSpeakingPrepare(){
-        return (SetNoSpeakingRequest) Academy.requestEnhance(new SetNoSpeakingRequest(serviceName));
+        return new SetNoSpeakingRequest();
     }
     public GetNoSpeakingRequest getNoSpeakingPrepare(){
-        return (GetNoSpeakingRequest) Academy.requestEnhance(new GetNoSpeakingRequest(serviceName));
+        return new GetNoSpeakingRequest();
     }
 }

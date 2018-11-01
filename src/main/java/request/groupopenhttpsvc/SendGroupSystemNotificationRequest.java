@@ -19,9 +19,6 @@ public class SendGroupSystemNotificationRequest extends GeneralRequest<SendGroup
     private List<String> toMembersAccount;
     @JSONField(name = "Content")
     private String content;
-    public SendGroupSystemNotificationRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {

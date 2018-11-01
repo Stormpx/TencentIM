@@ -16,9 +16,6 @@ public class GroupAddRequest extends SnsRequest<GroupAddResponse> {
     @JSONField(name = "To_Account")
     private List<String> toAccount;
 
-    public GroupAddRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String check() {

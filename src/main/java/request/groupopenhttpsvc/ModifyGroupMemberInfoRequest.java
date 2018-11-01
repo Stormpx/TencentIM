@@ -23,9 +23,6 @@ public class ModifyGroupMemberInfoRequest extends GeneralRequest<GeneralResponse
     private String msgFlag;
     @JSONField(name = "AppMemberDefinedData")
     private List<AppDefinedData> appDefinedData;
-    public ModifyGroupMemberInfoRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {

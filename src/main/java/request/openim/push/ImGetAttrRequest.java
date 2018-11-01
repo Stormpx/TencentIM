@@ -15,9 +15,7 @@ public class ImGetAttrRequest extends GeneralRequest<ImGetAttrResponse> {
     @JSONField(name = "To_Account")
     private List<String> to_Account;
 
-    public ImGetAttrRequest(String serviceName) {
-        super(serviceName);
-    }
+
 
     @Override
     protected String checkParam() {

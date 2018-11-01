@@ -13,9 +13,6 @@ public class ImSetAttrNameRequest extends GeneralRequest<GeneralResponse> {
     @JSONField(name = "AttrNames")
     private Map<String,String> attrNames;
 
-    public ImSetAttrNameRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {

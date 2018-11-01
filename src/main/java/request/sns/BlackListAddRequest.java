@@ -14,9 +14,6 @@ public class BlackListAddRequest extends SnsRequest<BlackListAddResponse> {
     @JSONField(name = "To_Account")
     private List<String> toAccount;
 
-    public BlackListAddRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String check() {

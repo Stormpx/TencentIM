@@ -15,10 +15,6 @@ public class RegisterAccountV1Request extends GeneralRequest<GeneralResponse> {
     @JSONField(name = "Password")
     private String password;
 
-    public RegisterAccountV1Request(String serviceName) {
-        super(serviceName);
-    }
-
     @Override
     public String checkParam() {
         if (StringUtils.isEmpty(identifier)) {

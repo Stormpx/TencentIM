@@ -17,9 +17,6 @@ public class ImportGroupMemberRequest extends GeneralRequest<ImportGroupMemberRe
     @JSONField(name = "MemberList")
     private List<MemberImport> memberList;
 
-    public ImportGroupMemberRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {

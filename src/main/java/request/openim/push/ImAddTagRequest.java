@@ -16,9 +16,7 @@ public class ImAddTagRequest extends GeneralRequest<GeneralResponse> {
     @JSONField(name = "UserTags")
     private List<UserTag> userTags;
 
-    public ImAddTagRequest(String serviceName) {
-        super(serviceName);
-    }
+
 
     @Override
     protected String checkParam() {

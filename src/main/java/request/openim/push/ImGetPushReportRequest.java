@@ -13,9 +13,6 @@ public class ImGetPushReportRequest extends GeneralRequest<ImGetPushReportRespon
     @JSONField(name = "TaskIds")
     private List<String> taskIds;
 
-    public ImGetPushReportRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     public String checkParam() {

@@ -13,9 +13,6 @@ public class GetAppidGroupListRequest extends GeneralRequest<GetAppidGroupListRe
     private Integer next;
     @JSONField(name = "GroupType")
     private String groupType;
-    public GetAppidGroupListRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {

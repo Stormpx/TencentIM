@@ -11,9 +11,7 @@ public class GetNoSpeakingRequest extends GeneralRequest<GetNoSpeakingResponse> 
     @JSONField(name = "Get_Account")
     private String getAccount;
 
-    public GetNoSpeakingRequest(String serviceName) {
-        super(serviceName);
-    }
+
 
     @Override
     protected String checkParam() {

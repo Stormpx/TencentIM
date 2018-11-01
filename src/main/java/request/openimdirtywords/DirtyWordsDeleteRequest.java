@@ -14,9 +14,6 @@ import java.util.List;
 public class DirtyWordsDeleteRequest extends GeneralRequest<GeneralResponse> {
     @JSONField(name = "DirtyWordsList")
     private List<String> dirtyWordsList;
-    public DirtyWordsDeleteRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {

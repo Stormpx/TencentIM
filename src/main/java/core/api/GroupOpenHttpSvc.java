@@ -6,74 +6,73 @@ import request.groupopenhttpsvc.*;
 
 @ServiceName("group_open_http_svc")
 public class GroupOpenHttpSvc {
-    private final static String serviceName="group_open_http_svc";
     public GetAppidGroupListRequest getAppidGroupListPrepare(){
-        return (GetAppidGroupListRequest) Academy.requestEnhance(new GetAppidGroupListRequest(serviceName));
+        return new GetAppidGroupListRequest();
     }
     public CreateGroupRequset createGroupPrepare(){
-        return (CreateGroupRequset) Academy.requestEnhance(new CreateGroupRequset(serviceName));
+        return new CreateGroupRequset();
     }
     public GetGroupInfoRequest getGroupInfoPrepare(){
-        return (GetGroupInfoRequest) Academy.requestEnhance(new GetGroupInfoRequest(serviceName));
+        return new GetGroupInfoRequest();
     }
     public GetGroupMemberInfoRequest getGroupMemberInfoPrepare(){
-        return (GetGroupMemberInfoRequest) Academy.requestEnhance(new GetGroupMemberInfoRequest(serviceName));
+        return new GetGroupMemberInfoRequest();
     }
     public ModifyGroupBaseInfoRequest modifyGroupBaseInfoPrepare(){
-        return (ModifyGroupBaseInfoRequest) Academy.requestEnhance(new ModifyGroupBaseInfoRequest(serviceName));
+        return new ModifyGroupBaseInfoRequest();
     }
     public AddGroupMemberRequest addGroupMemberPrepare(){
-        return (AddGroupMemberRequest) Academy.requestEnhance(new AddGroupMemberRequest(serviceName));
+        return new AddGroupMemberRequest();
     }
     public DeleteGroupMemberRequest deleteGroupMemberPrepare(){
-        return (DeleteGroupMemberRequest) Academy.requestEnhance(new DeleteGroupMemberRequest(serviceName));
+        return new DeleteGroupMemberRequest();
     }
     public ModifyGroupMemberInfoRequest modifyGroupMemberInfoPrepare(){
-        return (ModifyGroupMemberInfoRequest) Academy.requestEnhance(new ModifyGroupMemberInfoRequest(serviceName));
+        return new ModifyGroupMemberInfoRequest();
     }
     public DestroyGroupRequest destroyGroupPrepare(){
-        return (DestroyGroupRequest) Academy.requestEnhance(new DestroyGroupRequest(serviceName));
+        return new DestroyGroupRequest();
     }
     public GetJoinedGroupListRequest getJoinedGroupListPrepare(){
-        return (GetJoinedGroupListRequest) Academy.requestEnhance(new GetJoinedGroupListRequest(serviceName));
+        return new GetJoinedGroupListRequest();
     }
     public GetRoleInGroupRequest getRoleInGroupPrepare(){
-        return (GetRoleInGroupRequest) Academy.requestEnhance(new GetRoleInGroupRequest(serviceName));
+        return new GetRoleInGroupRequest();
     }
     public ForbidSendMsgRequest forbidSendMsgPrepare(){
-        return (ForbidSendMsgRequest) Academy.requestEnhance(new ForbidSendMsgRequest(serviceName));
+        return new ForbidSendMsgRequest();
     }
     public GetGroupShuttedUinRequest getGroupShuttedUinPrepare(){
-        return (GetGroupShuttedUinRequest) Academy.requestEnhance(new GetGroupShuttedUinRequest(serviceName));
+        return new GetGroupShuttedUinRequest();
     }
     public SendGroupMsgRequest sendGroupMsgPrepare(){
-        return (SendGroupMsgRequest) Academy.requestEnhance(new SendGroupMsgRequest(serviceName));
+        return new SendGroupMsgRequest();
     }
     public SendGroupSystemNotificationRequest sendGroupSystemNotificationPrepare(){
-        return (SendGroupSystemNotificationRequest) Academy.requestEnhance(new SendGroupSystemNotificationRequest(serviceName));
+        return new SendGroupSystemNotificationRequest();
     }
     public GroupMsgRecallRequest groupMsgRecallPrepare(){
-        return (GroupMsgRecallRequest) Academy.requestEnhance(new GroupMsgRecallRequest(serviceName));
+        return new GroupMsgRecallRequest();
     }
     public ChangeGroupOwnerRequest changeGroupOwnerPrepare(){
-        return (ChangeGroupOwnerRequest) Academy.requestEnhance(new ChangeGroupOwnerRequest(serviceName));
+        return new ChangeGroupOwnerRequest();
     }
     public ImportGroupRequest importGroupPrepare(){
-        return (ImportGroupRequest) Academy.requestEnhance(new ImportGroupRequest(serviceName));
+        return new ImportGroupRequest();
     }
     public ImportGroupMsgRequest importGroupMsgPrepare(){
-        return (ImportGroupMsgRequest) Academy.requestEnhance(new ImportGroupMsgRequest(serviceName));
+        return new ImportGroupMsgRequest();
     }
     public ImportGroupMemberRequest importGroupMemberPrepare(){
-        return (ImportGroupMemberRequest) Academy.requestEnhance(new ImportGroupMemberRequest(serviceName));
+        return new ImportGroupMemberRequest();
     }
     public SetUnreadMsgNumRequest setUnreadMsgNumPrepare(){
-        return (SetUnreadMsgNumRequest) Academy.requestEnhance(new SetUnreadMsgNumRequest(serviceName));
+        return new SetUnreadMsgNumRequest();
     }
     public DeleteGroupMsgBySenderRequest deleteGroupMsgBySenderPrepare(){
-        return (DeleteGroupMsgBySenderRequest) Academy.requestEnhance(new DeleteGroupMsgBySenderRequest(serviceName));
+        return new DeleteGroupMsgBySenderRequest();
     }
     public GroupMsgGetSimpleRequest groupMsgGetSimplePrepare(){
-        return (GroupMsgGetSimpleRequest) Academy.requestEnhance(new GroupMsgGetSimpleRequest(serviceName));
+        return new GroupMsgGetSimpleRequest();
     }
 }

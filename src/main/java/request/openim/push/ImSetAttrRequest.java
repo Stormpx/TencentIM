@@ -16,9 +16,6 @@ import java.util.List;
 public class ImSetAttrRequest extends GeneralRequest<GeneralResponse> {
     @JSONField(name = "UserAttrs")
     private List<AccountAttrs> userAttrs;
-    public ImSetAttrRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {

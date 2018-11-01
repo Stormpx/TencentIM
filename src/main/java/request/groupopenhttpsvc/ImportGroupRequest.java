@@ -34,9 +34,6 @@ public class ImportGroupRequest extends GeneralRequest<ImportGroupResponse> {
     @JSONField(name = "CreateTime")
     private Integer createTime;
 
-    public ImportGroupRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {

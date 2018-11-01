@@ -13,9 +13,6 @@ import java.util.List;
 public class BlackListDeleteRequest extends SnsRequest<BlackListDeleteResponse> {
     @JSONField(name = "To_Account")
     private List<String> toAccount;
-    public BlackListDeleteRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String check() {

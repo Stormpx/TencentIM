@@ -26,9 +26,6 @@ public class ImportMsgRequest extends GeneralRequest<GeneralResponse> {
     @JSONField(name = "MsgBody")
     private List<TIMMsgElement> msgBody;
 
-    public ImportMsgRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     public String checkParam() {

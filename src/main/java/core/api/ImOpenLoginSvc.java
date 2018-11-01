@@ -7,15 +7,14 @@ import request.imopenloginsvc.MultiAccountImportRequest;
 
 @ServiceName("im_open_login_svc")
 public  class ImOpenLoginSvc {
-    private final static String serviceName="im_open_login_svc";
     public AccountImportRequest accountImportPrepare(){
-        return (AccountImportRequest) Academy.requestEnhance(new AccountImportRequest(serviceName));
+        return new AccountImportRequest();
     }
     public MultiAccountImportRequest multiaccountImportPrepare(){
-        return (MultiAccountImportRequest) Academy.requestEnhance(new MultiAccountImportRequest(serviceName));
+        return new MultiAccountImportRequest();
     }
     public KickRequest kickPrepare(){
-        return(KickRequest) Academy.requestEnhance(new KickRequest(serviceName));
+        return new KickRequest();
     }
 
 }

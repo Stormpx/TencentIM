@@ -6,8 +6,8 @@ import request.openmsgsvc.GetHistoryRequest;
 
 @ServiceName("open_msg_svc")
 public class OpenMsgSvc {
-    private final static String serviceName="open_msg_svc";
+
     public GetHistoryRequest getHistoryPrepare(){
-        return (GetHistoryRequest) Academy.requestEnhance(new GetHistoryRequest(serviceName));
+        return new GetHistoryRequest();
     }
 }

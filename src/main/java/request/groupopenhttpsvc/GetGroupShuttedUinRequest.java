@@ -10,9 +10,6 @@ import util.VariableUtil;
 public class GetGroupShuttedUinRequest extends GeneralRequest<GetGroupShuttedUinResponse> {
     @JSONField(name = "GroupId")
     private String groupId;
-    public GetGroupShuttedUinRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {

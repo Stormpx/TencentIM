@@ -12,9 +12,6 @@ public class DeleteGroupMsgBySenderRequest extends GeneralRequest<GeneralRespons
     private String groupId;
     @JSONField(name = "Sender_Account")
     private String senderAccount;
-    public DeleteGroupMsgBySenderRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {

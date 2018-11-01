@@ -17,9 +17,6 @@ public class PortraitGetRequest extends GeneralRequest<PortraitGetResponse> {
     @JSONField(name = "TagList")
     private List<String> tagList;
 
-    public PortraitGetRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {

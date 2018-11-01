@@ -19,9 +19,6 @@ public class AddGroupMemberRequest extends GeneralRequest<AddGroupMemberResponse
     private Integer silence;
     @JSONField(name = "MemberList")
     private List<Member> memberList;
-    public AddGroupMemberRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {

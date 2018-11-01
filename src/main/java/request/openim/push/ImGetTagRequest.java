@@ -15,9 +15,6 @@ public class ImGetTagRequest extends GeneralRequest<ImGetTagResponse> {
     @JSONField(name = "To_Account")
     private List<String> to_Account;
 
-    public ImGetTagRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {

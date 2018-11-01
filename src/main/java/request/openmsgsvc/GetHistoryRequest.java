@@ -14,9 +14,6 @@ public class GetHistoryRequest extends GeneralRequest<GetHistoryResponse> {
     //2015120121 表示获取 2015 年 12 月 1 日 21:00~21:59 的消息的下载地址
     @JSONField(name = "MsgTime")
     private String msgTime;
-    public GetHistoryRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {

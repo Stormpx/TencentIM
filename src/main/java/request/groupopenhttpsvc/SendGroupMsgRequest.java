@@ -29,9 +29,6 @@ public class SendGroupMsgRequest extends GeneralRequest<SendGroupMsgResponse> {
     private OfflinePushInfo offlinePushInfo;
     @JSONField(name = "ForbidCallbackControl")
     private List<String> forbidCallbackControl;
-    public SendGroupMsgRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     public String checkParam() {

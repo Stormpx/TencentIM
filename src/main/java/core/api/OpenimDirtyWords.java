@@ -8,16 +8,16 @@ import request.openimdirtywords.DirtyWordsGetRequest;
 
 @ServiceName("openim_dirty_words")
 public class OpenimDirtyWords {
-    private final static String serviceName="openim_dirty_words";
+
 
     public DirtyWordsGetRequest getPrepare(){
-        return (DirtyWordsGetRequest) Academy.requestEnhance(new DirtyWordsGetRequest(serviceName));
+        return new DirtyWordsGetRequest();
     }
 
     public DirtyWordsAddRequest addPrepare(){
-        return (DirtyWordsAddRequest) Academy.requestEnhance(new DirtyWordsAddRequest(serviceName));
+        return new DirtyWordsAddRequest();
     }
     public DirtyWordsDeleteRequest deletePrepare(){
-        return (DirtyWordsDeleteRequest) Academy.requestEnhance(new DirtyWordsDeleteRequest(serviceName));
+        return new DirtyWordsDeleteRequest();
     }
 }

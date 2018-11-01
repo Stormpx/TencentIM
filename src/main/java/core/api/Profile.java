@@ -7,11 +7,11 @@ import request.profile.PortraitSetRequest;
 
 @ServiceName("profile")
 public class Profile  {
-    private final static String serviceName="profile";
+
     public PortraitGetRequest portraitGetPrepare(){
-        return (PortraitGetRequest) Academy.requestEnhance(new PortraitGetRequest(serviceName));
+        return new PortraitGetRequest();
     }
     public PortraitSetRequest portraitSetPrepare(){
-        return (PortraitSetRequest) Academy.requestEnhance(new PortraitSetRequest(serviceName));
+        return new PortraitSetRequest();
     }
 }

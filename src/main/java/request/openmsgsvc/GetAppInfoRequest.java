@@ -8,9 +8,6 @@ import java.util.List;
 public class GetAppInfoRequest extends GeneralRequest {
     @JSONField(name = "RequestField")
     private List<String> requestField;
-    public GetAppInfoRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {

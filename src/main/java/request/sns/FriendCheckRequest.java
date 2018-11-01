@@ -17,9 +17,7 @@ public class FriendCheckRequest extends SnsRequest<FriendCheckResponse> {
     @JSONField(name = "CheckType")
     private String checkType;
 
-    public FriendCheckRequest(String serviceName) {
-        super(serviceName);
-    }
+
 
     @Override
     protected String check() {

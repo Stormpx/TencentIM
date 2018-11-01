@@ -13,9 +13,6 @@ import java.util.List;
 public class GroupDeleteRequest extends SnsRequest<GroupDeleteResponse> {
     @JSONField(name = "GroupName")
     private List<String> groupName;
-    public GroupDeleteRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String check() {

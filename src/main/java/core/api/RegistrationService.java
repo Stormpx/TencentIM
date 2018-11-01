@@ -6,9 +6,9 @@ import request.imopenloginsvc.RegisterAccountV1Request;
 
 @ServiceName("registration_service")
 public class RegistrationService {
-    private final static String serviceName="registration_service";
+
     public RegisterAccountV1Request registerAccountV1Prepare(){
 
-        return (RegisterAccountV1Request) Academy.requestEnhance(new RegisterAccountV1Request(serviceName));
+        return new RegisterAccountV1Request();
     }
 }

@@ -18,9 +18,6 @@ public class GroupMsgRecallRequest extends GeneralRequest<GroupMsgRecallResponse
     @JSONField(name = "MsgSeqList")
     private List<MsgSeq> msgSeqList;
 
-    public GroupMsgRecallRequest(String serviceName) {
-        super(serviceName);
-    }
 
     public GroupMsgRecallRequest setGroupId(String groupId) {
         this.groupId = groupId;return this;

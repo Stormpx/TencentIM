@@ -13,9 +13,6 @@ public class MultiAccountImportRequest extends GeneralRequest<GeneralResponse> {
     @JSONField(name = "Accounts")
     private List<String> accounts;
 
-    public MultiAccountImportRequest(String serviceName) {
-        super(serviceName);
-    }
 
 
     @Override

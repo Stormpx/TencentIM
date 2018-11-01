@@ -17,9 +17,6 @@ public class PortraitSetRequest extends GeneralRequest<GeneralResponse> {
     private String fromAccount;
     @JSONField(name = "ProfileItem")
     private List<ProfileTag> profileItem;
-    public PortraitSetRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {

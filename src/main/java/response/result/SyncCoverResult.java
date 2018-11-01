@@ -8,18 +8,24 @@ public class SyncCoverResult<T> implements CoverResult<T> {
     private JSONObject jsonObject;
     private Class<T> tClass;
 
+    public SyncCoverResult(JSONObject jsonObject, Class<T> tClass) {
+        this.jsonObject = jsonObject;
+        this.tClass = tClass;
+    }
+
     @Override
     public T get() {
-        return null;
+
+        return jsonObject.toJavaObject(tClass);
     }
 
     @Override
     public T get(long timeout, TimeUnit unit) {
-        return null;
+        return get();
     }
 
     @Override
     public boolean isDone() {
-        return false;
+        return true;
     }
 }

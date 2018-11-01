@@ -19,9 +19,6 @@ public class DeleteGroupMemberRequest extends GeneralRequest<GeneralResponse> {
     private String reason;
     @JSONField(name = "MemberToDel_Account")
     private List<String> memberToDelAccount;
-    public DeleteGroupMemberRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {

@@ -17,9 +17,6 @@ public class GetGroupInfoRequest extends GeneralRequest<GetGroupInfoResponse> {
     private List<String> groupIdList;
     @JSONField(name = "ResponseFilter")
     private ResponseFilter responseFilter;
-    public GetGroupInfoRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {

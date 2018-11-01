@@ -8,9 +8,6 @@ import util.VariableUtil;
 public abstract class SnsRequest<T extends GeneralResponse> extends GeneralRequest<T> {
     @JSONField(name = "From_Account")
     protected String fromAccount;
-    public SnsRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {

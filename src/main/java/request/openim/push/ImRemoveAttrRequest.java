@@ -15,9 +15,6 @@ import java.util.List;
 public class ImRemoveAttrRequest extends GeneralRequest<GeneralResponse> {
     @JSONField(name = "UserAttrs")
     private List<AccountRemoveAttrs> userAttrs;
-    public ImRemoveAttrRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {
@@ -32,11 +29,7 @@ public class ImRemoveAttrRequest extends GeneralRequest<GeneralResponse> {
     }
 
     public ImRemoveAttrRequest setUserAttrs(List<AccountRemoveAttrs> userAttrs) {
-        if (this.userAttrs!=null){
-            this.userAttrs.addAll(userAttrs);
-        }else {
-            this.userAttrs = userAttrs;
-        }
+        this.userAttrs = userAttrs;
         return this;
     }
     public ImRemoveAttrRequest setUserAttrs(AccountRemoveAttrs... userAttrs) {

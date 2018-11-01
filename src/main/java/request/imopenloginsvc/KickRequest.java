@@ -9,9 +9,6 @@ public class KickRequest extends GeneralRequest {
     @JSONField(name = "Identifier")
     private String Identifier;
 
-    public KickRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     public String checkParam() {

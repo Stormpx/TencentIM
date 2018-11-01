@@ -30,9 +30,7 @@ public class SendMsgRequest extends GeneralRequest<GeneralResponse> {
     private List<TIMMsgElement> msgBody;
     @JSONField(name = "OfflinePushInfo")
     private OfflinePushInfo offlinePushInfo;
-    public SendMsgRequest(String serviceName) {
-        super(serviceName);
-    }
+
 
     @Override
     public String checkParam() {

@@ -26,9 +26,7 @@ public class BatchSendMsgRequest extends GeneralRequest<BatchSendMsgResponse> {
     @JSONField(name = "OfflinePushInfo")
     private OfflinePushInfo offlinePushInfo;
 
-    public BatchSendMsgRequest(String serviceName) {
-        super(serviceName);
-    }
+
 
     @Override
     public String checkParam() {

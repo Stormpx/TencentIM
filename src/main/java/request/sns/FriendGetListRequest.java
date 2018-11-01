@@ -16,9 +16,6 @@ public class FriendGetListRequest extends SnsRequest<FriendGetListResponse> {
     @JSONField(name = "TagList")
     private List<String> tagList;
 
-    public FriendGetListRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String check() {

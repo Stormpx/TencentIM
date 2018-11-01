@@ -5,11 +5,11 @@ import request.GeneralRequest;
 
 
 public class Academy {
-
-    public static GeneralRequest requestEnhance(final GeneralRequest generalRequest){
+    private static RequestMethodInterceptor requestMethodInterceptor=new RequestMethodInterceptor();
+    public static <T> T requestEnhance(Class<T> tClass){
         Enhancer enhancer = new Enhancer();
-        enhancer.setSuperclass(generalRequest.getClass());
-        enhancer.setCallback(new RequestMethodInterceptor());
-        return (GeneralRequest) enhancer.create(new Class[]{String.class},new Object[]{generalRequest.getServiceName()});
+        enhancer.setSuperclass(tClass);
+        enhancer.setCallback(requestMethodInterceptor);
+        return (T) enhancer.create();
     }
 }

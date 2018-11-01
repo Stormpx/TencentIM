@@ -14,9 +14,6 @@ import java.util.List;
 public class ImRemoveAllTagsRequest extends GeneralRequest<GeneralResponse> {
     @JSONField(name = "To_Account")
     private List<String> to_Account;
-    public ImRemoveAllTagsRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {

@@ -14,9 +14,6 @@ import java.util.List;
 public class FriendUpdateRequest extends SnsRequest<FriendUpdateResponse> {
     @JSONField(name = "UpdateItem")
     private List<UpdateItem> updateItem;
-    public FriendUpdateRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String check() {

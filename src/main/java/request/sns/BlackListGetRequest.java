@@ -13,9 +13,6 @@ public class BlackListGetRequest extends SnsRequest<BlackListGetResponse> {
     @JSONField(name = "LastSequence")
     private Integer lastSequence;
 
-    public BlackListGetRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String check() {

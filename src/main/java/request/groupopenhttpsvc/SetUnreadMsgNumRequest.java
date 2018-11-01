@@ -14,9 +14,6 @@ public class SetUnreadMsgNumRequest extends GeneralRequest<GeneralResponse> {
     private String memberAccount;
     @JSONField(name = "UnreadMsgNum")
     private Integer unreadMsgNum;
-    public SetUnreadMsgNumRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     public String checkParam() {

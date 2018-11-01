@@ -14,9 +14,6 @@ public class GroupMsgGetSimpleRequest extends GeneralRequest<GroupMsgGetSimpleRe
     private Integer reqMsgSeq;
     @JSONField(name = "ReqMsgNumber")
     private Integer reqMsgNumber;
-    public GroupMsgGetSimpleRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {

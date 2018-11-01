@@ -22,9 +22,7 @@ public class FriendAddRequest extends SnsRequest<FriendAddResponse> {
     //1 表示强制加好友；0 表示常规加好友方式。
     @JSONField(name = "ForceAddFlags")
     private Integer forceAddFlags;
-    public FriendAddRequest(String serviceName) {
-        super(serviceName);
-    }
+
 
     @Override
     protected String check() {

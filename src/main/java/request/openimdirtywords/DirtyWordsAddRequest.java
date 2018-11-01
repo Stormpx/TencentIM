@@ -15,9 +15,6 @@ public class DirtyWordsAddRequest extends GeneralRequest<GeneralResponse> {
     @JSONField(name = "DirtyWordsList")
     private List<String> dirtyWordsList;
 
-    public DirtyWordsAddRequest(String serviceName) {
-        super(serviceName);
-    }
 
     public List<String> getDirtyWordsList() {
         return dirtyWordsList;

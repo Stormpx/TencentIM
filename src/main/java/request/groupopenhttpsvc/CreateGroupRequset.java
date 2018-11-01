@@ -37,9 +37,6 @@ public class CreateGroupRequset extends GeneralRequest<CreateGroupResponse> {
     @JSONField(name = "MemberList")
     private List<Member> memberList;
 
-    public CreateGroupRequset(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {

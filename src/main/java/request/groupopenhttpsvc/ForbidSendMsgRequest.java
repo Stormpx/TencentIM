@@ -19,9 +19,6 @@ public class ForbidSendMsgRequest extends GeneralRequest<GeneralResponse> {
     @JSONField(name = "ShutUpTime")
     private Integer shutUpTime;
 
-    public ForbidSendMsgRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {

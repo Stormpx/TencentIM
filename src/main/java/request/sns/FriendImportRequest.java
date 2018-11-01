@@ -15,9 +15,6 @@ public class FriendImportRequest extends SnsRequest<FriendImportResponse> {
     @JSONField(name = "AddFriendItem")
     private List<FriendItem> addFriendItem;
 
-    public FriendImportRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String check() {

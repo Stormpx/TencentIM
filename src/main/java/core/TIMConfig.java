@@ -1,17 +1,16 @@
-package config;
+package core;
 
-import com.alibaba.fastjson.util.TypeUtils;
 import org.apache.commons.configuration.Configuration;
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.PropertiesConfiguration;
 import org.apache.commons.lang3.RandomUtils;
 
-public class TencentImConfig {
+public class TIMConfig {
     private static String sdkappid ;
     private static String identifier;
     private static String usersig;
-    private static String host;
-    private static String ver;
+    private static String host="console.tim.qq.com";
+    private static String ver="v4";
     private static boolean async =true;
     private static Configuration configs;
 
@@ -68,26 +67,30 @@ public class TencentImConfig {
     }
 
     public static void setSdkappid(String sdkappid) {
-        TencentImConfig.sdkappid = sdkappid;
+        TIMConfig.sdkappid = sdkappid;
     }
 
     public static void setIdentifier(String identifier) {
-        TencentImConfig.identifier = identifier;
+        TIMConfig.identifier = identifier;
     }
 
     public static void setUsersig(String usersig) {
-        TencentImConfig.usersig = usersig;
+        TIMConfig.usersig = usersig;
     }
 
     public static void setHost(String host) {
-        TencentImConfig.host = host;
+        TIMConfig.host = host;
     }
 
     public static void setVer(String ver) {
-        TencentImConfig.ver = ver;
+        TIMConfig.ver = ver;
     }
 
     public static void setAsync(boolean async) {
-        TencentImConfig.async = async;
+        TIMConfig.async = async;
+    }
+
+    public static void setConfigs(Configuration configs) {
+        TIMConfig.configs = configs;
     }
 }

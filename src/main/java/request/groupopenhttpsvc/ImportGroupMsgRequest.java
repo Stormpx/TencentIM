@@ -18,9 +18,6 @@ public class ImportGroupMsgRequest extends GeneralRequest<ImportGroupMsgResponse
     @JSONField(name="MsgList")
     private List<MessageImport> msgList;
 
-    public ImportGroupMsgRequest(String serviceName) {
-        super(serviceName);
-    }
 
     public String getGroupId() {
         return groupId;

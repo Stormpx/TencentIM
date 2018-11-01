@@ -20,9 +20,6 @@ public class FriendGetAllRequest extends SnsRequest<FriendGetAllResponse> {
     private Integer getCount;
     @JSONField(name = "TagList")
     private List<String> tagList;
-    public FriendGetAllRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String check() {

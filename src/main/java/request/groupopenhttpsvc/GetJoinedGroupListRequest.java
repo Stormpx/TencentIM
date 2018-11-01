@@ -19,9 +19,6 @@ public class GetJoinedGroupListRequest extends GeneralRequest<GetJoinedGroupList
     private String groupType;
     @JSONField(name = "ResponseFilter")
     private ResponseFilter responseFilter;
-    public GetJoinedGroupListRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {

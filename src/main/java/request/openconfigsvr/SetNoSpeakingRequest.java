@@ -15,9 +15,7 @@ public class SetNoSpeakingRequest extends GeneralRequest<GeneralResponse> {
     @JSONField(name = "GroupmsgNospeakingTime")
     private Long groupmsgNospeakingTime;
 
-    public SetNoSpeakingRequest(String serviceName) {
-        super(serviceName);
-    }
+
 
     @Override
     protected String checkParam() {

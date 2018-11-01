@@ -10,9 +10,6 @@ import util.VariableUtil;
 public class DestroyGroupRequest extends GeneralRequest<GeneralResponse> {
     @JSONField(name = "GroupId")
     private String groupId;
-    public DestroyGroupRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {

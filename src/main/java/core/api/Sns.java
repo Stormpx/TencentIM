@@ -6,47 +6,47 @@ import request.sns.*;
 
 @ServiceName("sns")
 public class Sns {
-    private final static String serviceName="sns";
+
     public FriendAddRequest friendAddPrepare(){
-        return (FriendAddRequest) Academy.requestEnhance(new FriendAddRequest(serviceName));
+        return new FriendAddRequest();
     }
     public FriendImportRequest friendImportPrepare(){
-        return (FriendImportRequest) Academy.requestEnhance(new FriendImportRequest(serviceName));
+        return new FriendImportRequest();
     }
     public FriendUpdateRequest friendUpdatePrepare(){
-        return (FriendUpdateRequest) Academy.requestEnhance(new FriendUpdateRequest(serviceName));
+        return new FriendUpdateRequest();
     }
     public FriendDeleteRequest friendDeletePrepare(){
-        return (FriendDeleteRequest) Academy.requestEnhance(new FriendDeleteRequest(serviceName));
+        return new FriendDeleteRequest();
     }
     public FriendDeleteAllRequest friendDeleteAllPrepare(){
-        return (FriendDeleteAllRequest) Academy.requestEnhance(new FriendDeleteAllRequest(serviceName));
+        return new FriendDeleteAllRequest();
     }
     public FriendCheckRequest friendCheckPrepare(){
-        return (FriendCheckRequest) Academy.requestEnhance(new FriendCheckRequest(serviceName));
+        return new FriendCheckRequest();
     }
     public FriendGetAllRequest friendGetAllPrepare(){
-        return (FriendGetAllRequest) Academy.requestEnhance(new FriendGetAllRequest(serviceName));
+        return new FriendGetAllRequest();
     }
     public FriendGetListRequest friendGetListPrepare(){
-        return (FriendGetListRequest) Academy.requestEnhance(new FriendGetListRequest(serviceName));
+        return new FriendGetListRequest();
     }
     public BlackListAddRequest blackListAddPrepare(){
-        return (BlackListAddRequest) Academy.requestEnhance(new BlackListAddRequest(serviceName));
+        return new BlackListAddRequest();
     }
     public BlackListDeleteRequest blackListDeletePrepare(){
-        return (BlackListDeleteRequest) Academy.requestEnhance(new BlackListDeleteRequest(serviceName));
+        return new BlackListDeleteRequest();
     }
     public BlackListGetRequest blackListGetPrepare(){
-        return (BlackListGetRequest) Academy.requestEnhance(new BlackListGetRequest(serviceName));
+        return new BlackListGetRequest();
     }
     public BlackListCheckRequest blackListCheckPrepare(){
-        return (BlackListCheckRequest) Academy.requestEnhance(new BlackListCheckRequest(serviceName));
+        return new BlackListCheckRequest();
     }
     public GroupAddRequest groupAddPrepare(){
-        return (GroupAddRequest) Academy.requestEnhance(new GroupAddRequest(serviceName));
+        return new GroupAddRequest();
     }
     public GroupDeleteRequest groupDeletePrepare(){
-        return (GroupDeleteRequest) Academy.requestEnhance(new GroupDeleteRequest(serviceName));
+        return new GroupDeleteRequest();
     }
 }

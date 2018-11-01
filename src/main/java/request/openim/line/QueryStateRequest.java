@@ -14,9 +14,7 @@ import java.util.List;
 public class QueryStateRequest extends GeneralRequest<QueryStateResponse> {
     @JSONField(name = "To_Account")
     private List<String> to_Account;
-    public QueryStateRequest(String serviceName) {
-        super(serviceName);
-    }
+
 
     @Override
     public String checkParam() {

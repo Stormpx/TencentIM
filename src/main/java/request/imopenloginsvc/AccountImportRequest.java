@@ -17,9 +17,6 @@ public class AccountImportRequest extends GeneralRequest<GeneralResponse> {
     private String FaceUrl;
     private Integer Type;
 
-    public AccountImportRequest(String serviceName) {
-        super(serviceName);
-    }
 
 
     @Override

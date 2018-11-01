@@ -23,7 +23,7 @@ public  class Element {
 
     public static void main(String[] args) {
         /**
-         * 当set方法为object时，fastjson反序列会找不到方法*/
+         * 当set方法为object时，fastjson反序列会跳过方法*/
         GeneralResponse.test("{\n" +
                 "                        \"Text\": \"报上来\"\n" +
                 "                    }",Element.class);

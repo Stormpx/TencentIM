@@ -29,9 +29,6 @@ public class ModifyGroupBaseInfoRequest extends GeneralRequest<GeneralResponse> 
     private String applyJoinOption;
     @JSONField(name = "AppDefinedData")
     private List<AppDefinedData> appDefinedData;
-    public ModifyGroupBaseInfoRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {

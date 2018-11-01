@@ -11,9 +11,6 @@ public class ChangeGroupOwnerRequest extends GeneralRequest<GeneralResponse> {
     private String groupId;
     @JSONField(name = "NewOwner_Account")
     private String newOwnerAccount;
-    public ChangeGroupOwnerRequest(String serviceName) {
-        super(serviceName);
-    }
 
     @Override
     protected String checkParam() {
